@@ -16,8 +16,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Copy the required files (bot_logs.log and users.db) into the container
-# COPY bot_logs.log .
-# COPY users.db .
+COPY bot_logs.log .
+COPY users.db .
 COPY requirements.txt .
 COPY .env .
 
