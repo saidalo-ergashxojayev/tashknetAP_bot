@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my_telegram_bot
+    restart: always
+    volumes:
+      - ./bot_logs.log:/app/bot_logs.log
+      - ./users.db:/app/users.db
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python main.py

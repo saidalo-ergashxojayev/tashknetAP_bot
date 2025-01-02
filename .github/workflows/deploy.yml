@@ -1,0 +1,61 @@
+name: Web Polling Service
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Deploy Application
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PASSWORD }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            # Define ANSI color codes
+            RED='\033[0;31m'
+            GREEN='\033[0;32m'
+            YELLOW='\033[1;33m'
+            BLUE='\033[0;34m'
+            NC='\033[0m' # No Color
+            function log_info {
+              echo -e "${YELLOW}$1${NC}"
+            }
+            function log_success {
+              echo -e "${GREEN}$1${NC}"
+            }
+            function log_error {
+              echo -e "${RED}$1${NC}"
+            }
+            # Pull latest code from GitHub
+            log_info "---------------- PULLING CODE FROM GITHUB ----------------"
+            mkdir -p projects/isaev
+            cd projects/isaev
+
+            if [ -d ".git" ]; then
+              log_info "---------------- GIT REPO EXISTS, PULLING LATEST CODE ----------------"
+              git pull origin main
+              log_success "---------------- CODE PULLED FROM GITHUB -----------------"
+            else
+              log_info "---------------- GIT REPO DOES NOT EXIST, CLONING REPO ----------------"
+              git clone git@github.com:azizbek-qodirov/free_course-isaev.git .
+              git pull origin main
+              log_success "---------------- REPO CLONED -----------------"
+            fi
+
+            log_info "---------------- STOPPING BOT, DOCKER COMPOSE DOWN ----------------"
+            sudo docker compose down
+            log_error "---------------- BOT STOPPED ----------------"
+            log_info "---------------- STARTING BOT, DOCKER COMPOSE UP ----------------"
+            sudo docker compose up --build -d
+            log_success "---------------- BOT STARTED ----------------"
