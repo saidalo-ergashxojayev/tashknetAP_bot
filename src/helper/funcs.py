@@ -7,13 +7,18 @@ config = load_config()
 def create_start_text_text(short_link: str) -> StartTextResult:
 
     return StartTextResult(
-        photo_id="AgACAgIAAxkBAAMEZ3FcD5SwfoevjKP5oEhtqfSGC04AAsPoMRtFzIlL6_DNcKK98i0BAAMCAAN5AAM2BA",
+        photo_id="AgACAgIAAxkBAAMEZ3aSHeq5uxw_50q2oVab1u7CbeQAAl7nMRvMHLFLnDZ68cwn7D4BAAMCAAN5AAM2BA",
 
-        text_1="Bugundan yangi telegram kanalimda <u><b>self-study qilamiz!</b></u> \n\n" +
-        "✅ Va'da beraman siz bu challenge da qatnashib <b>LISTENING band scoreingizni kamida 1.0 ball ga oshirasiz.</b>\n\n" +
-        "‼️ <b>Shu bepul challengimni ichidagi materiallarni ishlash <u>listening dan 8.0 olishimga sababchi bo'lgan </u> desamham bo'ladi… </b>" +
-        "<b>🚀 LISTENING-im 5.5 da </b> qotib qoldi deyavermasdan, hozirdan practice qilishni boshlang va <b> 30 kundan keyin natijangiz gapirsin!</b>\n\n" +
-        "Pastdagi havola orqali ro'yxatdan o'ting va challengeda bepul qatnashing 👇🏻\n\n" +
+        text_1="Assalomu alaykum!\n\n" +
+        "<b>LISTENING 8.5 EGASI TOMONIDAN TEKIN KURS</b>\n\n" +
+        "⚠️ Aynan bugun siz mana shu <b>asl narxi 200,000 so'm</b>lik <b>LISTENING MARATHON 1.0</b> ni <b>TEKINGA</b> olishingiz mumkin.\n\n" +
+        "🎧 Sizga taqdim etiladigan materiallar:\n" +
+        "1. 15 full tests = 600 questions ✅\n" +
+        "<b>2. 15 VIDEO EXPLANATIONS ✅</b>\n" +
+        "3. 30 podcasts  ✅\n\n" +
+        "Bu kursning boshqa kurslardan farqi sizga har <b>bir savolni javobi ipidan ignasigacha videoda tushuntiriladi.</b>\n\n" +
+        "Listening Marathon sizgha natijangizni <b>1 balldan 3 ballgacha</b> ko'tarish imkoniyatini beradi. 🚀\n\n" +
+        "Pastdagi havola orqali ro'yxatdan o'ting va marafonda bepul qatnashing 👇🏻" +
         short_link,
 
         text_2="👋 <b>Do'stlaringizni</b> bu <b>loyiha</b> haqida xabardor qiling!\n\n" +
