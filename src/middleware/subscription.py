@@ -43,7 +43,7 @@ class SubscriptionMiddleware(BaseMiddleware):
 
                 for channel in REQUIRED_CHANNELS:
                     try:
-                        chat_member = await self.bot.get_chat_member(chat_id=f"@{channel}", user_id=user_id)
+                        chat_member = await self.bot.get_chat_member(chat_id=f"{channel}", user_id=user_id)
                         if chat_member.status not in ("member", "administrator", "creator"):
                             unsubscribed_channels.append(channel)
                     except TelegramBadRequest as e:
@@ -56,11 +56,13 @@ class SubscriptionMiddleware(BaseMiddleware):
                         inline_keyboard=[])
 
                     for i, channel in enumerate(unsubscribed_channels, start=1):
+                        link = await self.bot.create_chat_invite_link(chat_id=f"{channel}")
+
                         subscribe_keyboard.inline_keyboard.append(
                             [
                                 InlineKeyboardButton(
                                     text=f"📢 {i}-kanalga obuna bo'lish",
-                                    url=f"https://t.me/{channel}"
+                                    url=link.invite_link
                                 )
                             ]
                         )
@@ -82,7 +84,7 @@ class SubscriptionMiddleware(BaseMiddleware):
                             parse_mode="HTML"
                         )
 
-                    return              
+                    return
 
             except Exception as e:
                 logger.log(50, f"Error in SubscriptionMiddleware: {e}")
