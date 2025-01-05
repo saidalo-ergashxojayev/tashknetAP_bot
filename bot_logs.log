@@ -31849,3 +31849,427 @@ dispatcher.py:172 #INFO     [2025-01-03 18:51:33,876] - aiogram.event - Update i
 subscription.py:30 #INFO     [2025-01-03 18:51:37,150] - config.logger - USER: 6514272545, Mohinur💖
 subscription.py:50 #WARNING  [2025-01-03 18:51:37,164] - config.logger - Error checking channel jasurbekisaev: Telegram server says - Bad Request: member list is inaccessible
 dispatcher.py:172 #INFO     [2025-01-03 18:51:37,268] - aiogram.event - Update id=475208374 is handled. Duration 119 ms by bot id=7531140107
+main.py:10 #INFO     [2025-01-05 00:48:41,921] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 00:48:42,600] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 00:48:42,600] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 00:48:42,753] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 00:48:42,887] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 00:52:52,985] - config.logger - USER: 1856563190, Azizbek Qodirov
+dispatcher.py:172 #INFO     [2025-01-05 00:52:53,787] - aiogram.event - Update id=661102310 is handled. Duration 804 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 00:53:12,610] - aiogram.dispatcher - Received SIGTERM signal
+dispatcher.py:359 #INFO     [2025-01-05 00:53:12,611] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 00:53:12,612] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 00:53:12,865] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 06:01:47,524] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 06:01:48,151] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 06:01:48,151] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 06:01:48,283] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 06:01:48,404] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 06:02:00,331] - config.logger - USER: 1856563190, Azizbek Qodirov
+subscription.py:50 #WARNING  [2025-01-05 06:02:00,792] - config.logger - Error checking channel -1001500104999: Telegram server says - Bad Request: chat not found
+dispatcher.py:172 #INFO     [2025-01-05 06:02:00,948] - aiogram.event - Update id=661102311 is not handled. Duration 618 ms by bot id=6652950296
+dispatcher.py:315 #ERROR    [2025-01-05 06:02:00,948] - aiogram.event - Cause exception while process update id=661102311 by bot id=6652950296
+TelegramBadRequest: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+Traceback (most recent call last):
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/free-course3/src/middleware/subscription.py", line 92, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/free-course3/src/handlers/start.py", line 59, in bot_start
+    await message.answer_photo(photo=msg.photo_id, caption=msg.text_1, parse_mode=ParseMode.HTML)
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 487, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizbek/py-projects/num_converter/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+subscription.py:30 #INFO     [2025-01-05 06:02:07,708] - config.logger - USER: 1856563190, Azizbek Qodirov
+subscription.py:90 #CRITICAL [2025-01-05 06:02:07,708] - config.logger - Error in SubscriptionMiddleware: 'NoneType' object has no attribute 'startswith'
+start.py:65 #INFO     [2025-01-05 06:02:07,708] - config.logger - Photo ID: AgACAgIAAxkBAAIOGmd52g9xo_GlRZG6CzNjBQou7zK6AAKg5zEb0T_RS6-oHP_OTV-2AQADAgADeQADNgQ
+dispatcher.py:172 #INFO     [2025-01-05 06:02:07,708] - aiogram.event - Update id=661102312 is handled. Duration 1 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 06:03:24,323] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 06:03:24,324] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 06:03:24,325] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 06:03:24,576] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 06:03:27,541] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 06:03:28,253] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 06:03:28,254] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 06:03:28,391] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 06:03:28,542] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 06:03:29,630] - config.logger - USER: 1856563190, Azizbek Qodirov
+subscription.py:50 #WARNING  [2025-01-05 06:03:30,105] - config.logger - Error checking channel -1001500104999: Telegram server says - Bad Request: chat not found
+dispatcher.py:172 #INFO     [2025-01-05 06:03:30,425] - aiogram.event - Update id=661102313 is handled. Duration 796 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 06:04:56,454] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 06:04:56,455] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 06:04:56,455] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 06:04:56,707] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 06:05:02,371] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 06:05:03,083] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 06:05:03,083] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 06:05:03,239] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 06:05:03,370] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 06:05:10,613] - config.logger - USER: 1856563190, Azizbek Qodirov
+subscription.py:50 #WARNING  [2025-01-05 06:05:11,039] - config.logger - Error checking channel https://t.me/+d8MR-Hbq2jg0MzJi: Telegram server says - Bad Request: chat not found
+dispatcher.py:172 #INFO     [2025-01-05 06:05:11,368] - aiogram.event - Update id=661102314 is handled. Duration 757 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 06:17:48,769] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 06:17:48,770] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 06:17:48,771] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 06:17:49,022] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 06:17:52,042] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 06:17:52,656] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 06:17:52,657] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 06:17:52,798] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 06:17:52,928] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 06:17:57,470] - config.logger - USER: 1856563190, Azizbek Qodirov
+subscription.py:50 #WARNING  [2025-01-05 06:17:57,912] - config.logger - Error checking channel +d8MR-Hbq2jg0MzJi: Telegram server says - Bad Request: chat not found
+dispatcher.py:172 #INFO     [2025-01-05 06:17:58,249] - aiogram.event - Update id=661102315 is handled. Duration 780 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 06:21:02,826] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 06:21:02,827] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 06:21:02,827] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 06:21:03,078] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 06:21:06,570] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 06:21:07,481] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 06:21:07,482] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 06:21:07,622] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 06:21:07,750] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:47 #INFO     [2025-01-05 06:21:16,184] - config.logger - USER: 1856563190, Azizbek Qodirov
+subscription.py:35 #ERROR    [2025-01-05 06:21:16,678] - config.logger - Failed to resolve channel ID from invite link https://t.me/+d8MR-Hbq2jg0MzJi: Telegram server says - Bad Request: chat not found
+dispatcher.py:172 #INFO     [2025-01-05 06:21:17,025] - aiogram.event - Update id=661102316 is handled. Duration 843 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 06:24:22,702] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 06:24:22,704] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 06:24:22,704] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 06:24:22,956] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 06:24:25,879] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 06:24:26,537] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 06:24:26,538] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 06:24:26,686] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 06:24:26,820] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:47 #INFO     [2025-01-05 06:24:29,191] - config.logger - USER: 1856563190, Azizbek Qodirov
+subscription.py:35 #ERROR    [2025-01-05 06:24:29,617] - config.logger - Failed to resolve channel ID from invite link https://t.me/+d8MR-Hbq2jg0MzJi: Telegram server says - Bad Request: chat not found
+dispatcher.py:172 #INFO     [2025-01-05 06:24:29,938] - aiogram.event - Update id=661102317 is handled. Duration 749 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 06:25:29,073] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 06:25:29,074] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 06:25:29,074] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 06:25:29,325] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 06:25:32,211] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 06:25:32,888] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 06:25:32,888] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 06:25:33,019] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 06:25:33,152] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:47 #INFO     [2025-01-05 06:25:34,138] - config.logger - USER: 1856563190, Azizbek Qodirov
+subscription.py:35 #ERROR    [2025-01-05 06:25:34,589] - config.logger - Failed to resolve channel ID from invite link https://t.me/+d8MR-Hbq2jg0MzJi: Telegram server says - Bad Request: chat not found
+dispatcher.py:172 #INFO     [2025-01-05 06:25:34,940] - aiogram.event - Update id=661102318 is handled. Duration 803 ms by bot id=6652950296
+dispatcher.py:219 #ERROR    [2025-01-05 06:36:26,647] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+dispatcher.py:221 #WARNING  [2025-01-05 06:36:26,647] - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6652950296)
+dispatcher.py:233 #INFO     [2025-01-05 06:36:38,165] - aiogram.dispatcher - Connection established (tryings = 1, bot id = 6652950296)
+dispatcher.py:455 #WARNING  [2025-01-05 06:38:54,428] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 06:38:54,429] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 06:38:54,430] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 06:38:54,681] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 06:38:57,658] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 06:38:58,261] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 06:38:58,262] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 06:38:58,432] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 06:38:58,579] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 06:39:07,209] - config.logger - USER: 6040268947, Азизбек Қодиров
+subscription.py:50 #WARNING  [2025-01-05 06:39:07,637] - config.logger - Error checking channel -1001500104999: Telegram server says - Bad Request: chat not found
+dispatcher.py:172 #INFO     [2025-01-05 06:39:08,018] - aiogram.event - Update id=661102319 is handled. Duration 811 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 06:39:50,859] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 06:39:50,860] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 06:39:50,860] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 06:39:51,111] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 06:39:54,052] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 06:39:54,667] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 06:39:54,668] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 06:39:54,840] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 06:39:54,993] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 06:39:57,668] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 06:39:58,481] - aiogram.event - Update id=661102320 is handled. Duration 814 ms by bot id=6652950296
+subscription.py:30 #INFO     [2025-01-05 06:42:07,526] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 06:42:08,329] - aiogram.event - Update id=661102321 is handled. Duration 805 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 06:44:13,217] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 06:44:13,218] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 06:44:13,218] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 06:44:13,469] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 06:44:16,487] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 06:44:17,231] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 06:44:17,232] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 06:44:17,392] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 06:44:17,553] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:455 #WARNING  [2025-01-05 06:47:19,592] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 06:47:19,593] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 06:47:19,593] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 06:47:19,845] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 06:47:22,497] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 06:47:23,104] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 06:47:23,104] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 06:47:23,259] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 06:47:23,422] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 06:47:32,756] - config.logger - USER: 1856563190, Azizbek Qodirov
+dispatcher.py:172 #INFO     [2025-01-05 06:47:33,506] - aiogram.event - Update id=661102322 is handled. Duration 751 ms by bot id=6652950296
+subscription.py:30 #INFO     [2025-01-05 06:48:02,296] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 06:48:03,325] - aiogram.event - Update id=661102323 is handled. Duration 1031 ms by bot id=6652950296
+subscription.py:30 #INFO     [2025-01-05 06:48:51,243] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 06:48:52,251] - aiogram.event - Update id=661102324 is handled. Duration 1010 ms by bot id=6652950296
+dispatcher.py:172 #INFO     [2025-01-05 06:49:41,883] - aiogram.event - Update id=661102325 is handled. Duration 979 ms by bot id=6652950296
+subscription.py:30 #INFO     [2025-01-05 06:49:43,773] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 06:49:44,324] - aiogram.event - Update id=661102326 is handled. Duration 553 ms by bot id=6652950296
+subscription.py:30 #INFO     [2025-01-05 06:49:56,879] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 06:49:57,685] - aiogram.event - Update id=661102327 is handled. Duration 807 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 06:53:10,349] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 06:53:10,351] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 06:53:10,351] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 06:53:10,602] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 06:53:23,518] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 06:53:24,223] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 06:53:24,224] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 06:53:24,374] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 06:53:24,523] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 06:53:48,702] - config.logger - USER: 1856563190, Azizbek Qodirov
+dispatcher.py:172 #INFO     [2025-01-05 06:53:49,492] - aiogram.event - Update id=661102328 is handled. Duration 792 ms by bot id=6652950296
+dispatcher.py:172 #INFO     [2025-01-05 06:54:29,947] - aiogram.event - Update id=661102329 is not handled. Duration 4 ms by bot id=6652950296
+subscription.py:30 #INFO     [2025-01-05 06:55:20,559] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 06:55:21,456] - aiogram.event - Update id=661102330 is handled. Duration 898 ms by bot id=6652950296
+dispatcher.py:172 #INFO     [2025-01-05 06:56:25,556] - aiogram.event - Update id=661102331 is handled. Duration 999 ms by bot id=6652950296
+subscription.py:30 #INFO     [2025-01-05 06:56:41,126] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 06:56:41,960] - aiogram.event - Update id=661102332 is handled. Duration 835 ms by bot id=6652950296
+subscription.py:30 #INFO     [2025-01-05 06:57:17,317] - config.logger - USER: 1856563190, Azizbek Qodirov
+dispatcher.py:172 #INFO     [2025-01-05 06:57:18,396] - aiogram.event - Update id=661102333 is handled. Duration 1080 ms by bot id=6652950296
+subscription.py:30 #INFO     [2025-01-05 06:57:32,343] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 06:57:33,263] - aiogram.event - Update id=661102334 is handled. Duration 920 ms by bot id=6652950296
+subscription.py:30 #INFO     [2025-01-05 06:58:49,256] - config.logger - USER: 1856563190, Azizbek Qodirov
+dispatcher.py:172 #INFO     [2025-01-05 06:58:50,116] - aiogram.event - Update id=661102335 is handled. Duration 862 ms by bot id=6652950296
+subscription.py:30 #INFO     [2025-01-05 06:59:05,015] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 06:59:05,819] - aiogram.event - Update id=661102336 is handled. Duration 806 ms by bot id=6652950296
+dispatcher.py:172 #INFO     [2025-01-05 06:59:11,540] - aiogram.event - Update id=661102337 is handled. Duration 486 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 07:10:30,656] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 07:10:30,657] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 07:10:30,657] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 07:10:30,908] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 07:10:33,814] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 07:10:34,448] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 07:10:34,449] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 07:10:34,598] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 07:10:34,730] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:455 #WARNING  [2025-01-05 07:10:36,904] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 07:10:36,906] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 07:10:36,906] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 07:10:37,157] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 07:10:48,423] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 07:10:48,939] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 07:10:48,940] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 07:10:49,091] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 07:10:49,251] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 07:10:59,414] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 07:11:05,333] - aiogram.event - Update id=661102338 is handled. Duration 5921 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 07:13:00,200] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 07:13:00,201] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 07:13:00,201] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 07:13:00,452] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 07:13:03,234] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 07:13:03,870] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 07:13:03,871] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 07:13:04,010] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 07:13:04,150] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 07:13:20,538] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 07:13:25,999] - aiogram.event - Update id=661102339 is handled. Duration 5463 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 07:13:59,763] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 07:13:59,764] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 07:13:59,764] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 07:14:00,015] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 07:14:01,890] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 07:14:02,542] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 07:14:02,543] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 07:14:02,694] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 07:14:02,826] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 07:14:27,407] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 07:14:31,107] - aiogram.event - Update id=661102340 is handled. Duration 3702 ms by bot id=6652950296
+dispatcher.py:172 #INFO     [2025-01-05 07:14:45,341] - aiogram.event - Update id=661102341 is handled. Duration 473 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 07:15:45,069] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 07:15:45,071] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 07:15:45,071] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 07:15:45,322] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 07:15:47,676] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 07:15:48,259] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 07:15:48,259] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 07:15:48,394] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 07:15:48,553] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 07:16:05,817] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 07:16:07,010] - aiogram.event - Update id=661102342 is handled. Duration 1194 ms by bot id=6652950296
+dispatcher.py:172 #INFO     [2025-01-05 07:16:11,627] - aiogram.event - Update id=661102343 is handled. Duration 499 ms by bot id=6652950296
+subscription.py:30 #INFO     [2025-01-05 07:16:17,749] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 07:16:18,222] - aiogram.event - Update id=661102344 is handled. Duration 475 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 07:16:42,911] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 07:16:42,912] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 07:16:42,912] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 07:16:43,163] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 07:16:45,210] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 07:16:45,989] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 07:16:45,990] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 07:16:46,121] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 07:16:46,274] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:455 #WARNING  [2025-01-05 07:16:51,936] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 07:16:51,938] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 07:16:51,938] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 07:16:52,189] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 07:16:54,137] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 07:16:54,745] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 07:16:54,745] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 07:16:54,922] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 07:16:55,070] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 07:16:57,397] - config.logger - USER: 6040268947, Азизбек Қодиров
+subscription.py:93 #CRITICAL [2025-01-05 07:16:58,014] - config.logger - Error in SubscriptionMiddleware: 1 validation error for InlineKeyboardButton
+url
+  Input should be a valid string [type=string_type, input_value=ChatInviteLink(invite_lin...subscription_price=None), input_type=ChatInviteLink]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+dispatcher.py:172 #INFO     [2025-01-05 07:16:58,383] - aiogram.event - Update id=661102345 is handled. Duration 986 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 07:17:16,196] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 07:17:16,197] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 07:17:16,197] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 07:17:16,448] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 07:17:18,216] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 07:17:18,646] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 07:17:18,646] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 07:17:18,776] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 07:17:18,915] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 07:17:20,351] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 07:17:21,049] - aiogram.event - Update id=661102346 is handled. Duration 699 ms by bot id=6652950296
+dispatcher.py:172 #INFO     [2025-01-05 07:17:23,590] - aiogram.event - Update id=661102347 is handled. Duration 451 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 07:18:30,902] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 07:18:30,902] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 07:18:30,902] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 07:18:31,153] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 07:18:32,961] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 07:18:33,669] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 07:18:33,670] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 07:18:33,830] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 07:18:33,995] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:455 #WARNING  [2025-01-05 07:19:31,336] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 07:19:31,337] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 07:19:31,337] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 07:19:31,588] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 07:19:34,083] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 07:19:34,810] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 07:19:34,811] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 07:19:34,968] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 07:19:35,101] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 07:20:13,047] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 07:20:13,789] - aiogram.event - Update id=661102348 is handled. Duration 743 ms by bot id=6652950296
+dispatcher.py:172 #INFO     [2025-01-05 07:20:54,503] - aiogram.event - Update id=661102349 is handled. Duration 930 ms by bot id=6652950296
+subscription.py:30 #INFO     [2025-01-05 07:21:33,177] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 07:21:33,900] - aiogram.event - Update id=661102350 is handled. Duration 724 ms by bot id=6652950296
+dispatcher.py:172 #INFO     [2025-01-05 07:21:35,868] - aiogram.event - Update id=661102351 is handled. Duration 562 ms by bot id=6652950296
+dispatcher.py:172 #INFO     [2025-01-05 07:23:33,126] - aiogram.event - Update id=661102352 is handled. Duration 821 ms by bot id=6652950296
+subscription.py:30 #INFO     [2025-01-05 07:23:34,634] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 07:23:34,967] - aiogram.event - Update id=661102353 is handled. Duration 336 ms by bot id=6652950296
+subscription.py:30 #INFO     [2025-01-05 07:23:36,459] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 07:23:36,928] - aiogram.event - Update id=661102354 is handled. Duration 473 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 07:24:40,944] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 07:24:40,945] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 07:24:40,945] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 07:24:41,197] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 07:24:43,842] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 07:24:44,458] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 07:24:44,458] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 07:24:44,600] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 07:24:44,789] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 07:25:12,902] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 07:25:13,735] - aiogram.event - Update id=661102355 is handled. Duration 834 ms by bot id=6652950296
+subscription.py:30 #INFO     [2025-01-05 07:25:31,726] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 07:25:32,451] - aiogram.event - Update id=661102356 is handled. Duration 726 ms by bot id=6652950296
+subscription.py:30 #INFO     [2025-01-05 07:26:27,835] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 07:26:28,594] - aiogram.event - Update id=661102357 is handled. Duration 760 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 07:29:11,466] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 07:29:11,467] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 07:29:11,467] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 07:29:11,718] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 07:29:13,648] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 07:29:14,393] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 07:29:14,393] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 07:29:14,537] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 07:29:14,671] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 07:29:43,537] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 07:29:44,417] - aiogram.event - Update id=661102358 is handled. Duration 881 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 07:30:36,567] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 07:30:36,568] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 07:30:36,568] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 07:30:36,819] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 07:31:00,613] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 07:31:01,284] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 07:31:01,285] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 07:31:01,452] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 07:31:01,621] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 07:31:17,400] - config.logger - USER: 6040268947, Азизбек Қодиров
+subscription.py:94 #CRITICAL [2025-01-05 07:31:17,801] - config.logger - Error in SubscriptionMiddleware: Telegram server says - Forbidden: bot was kicked from the channel chat
+dispatcher.py:172 #INFO     [2025-01-05 07:31:18,119] - aiogram.event - Update id=661102359 is handled. Duration 720 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 07:31:37,346] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 07:31:37,347] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 07:31:37,347] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 07:31:37,598] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-01-05 07:32:56,236] - config.logger - Starting bot
+client.py:15 #INFO     [2025-01-05 07:32:56,838] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-01-05 07:32:56,839] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-01-05 07:32:56,975] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-01-05 07:32:57,115] - aiogram.dispatcher - Run polling for bot @justdotrobot id=6652950296 - '.'
+subscription.py:30 #INFO     [2025-01-05 07:33:18,985] - config.logger - USER: 6040268947, Азизбек Қодиров
+dispatcher.py:172 #INFO     [2025-01-05 07:33:19,742] - aiogram.event - Update id=661102360 is handled. Duration 758 ms by bot id=6652950296
+dispatcher.py:455 #WARNING  [2025-01-05 07:35:16,090] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-01-05 07:35:16,091] - aiogram.dispatcher - Polling stopped for bot @justdotrobot id=6652950296 - '.'
+dispatcher.py:554 #INFO     [2025-01-05 07:35:16,091] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-01-05 07:35:16,342] - config.logger - Connection to SQLite closed!

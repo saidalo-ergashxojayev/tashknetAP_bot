@@ -7,7 +7,7 @@ config = load_config()
 def create_start_text_text(short_link: str) -> StartTextResult:
 
     return StartTextResult(
-        photo_id="AgACAgIAAxkBAAMEZ3aSHeq5uxw_50q2oVab1u7CbeQAAl7nMRvMHLFLnDZ68cwn7D4BAAMCAAN5AAM2BA",
+        photo_id=config.tg_bot.PHOTO_ID,
 
         text_1="Assalomu alaykum!\n\n" +
         "<b>LISTENING 8.5 EGASI TOMONIDAN TEKIN KURS</b>\n\n" +

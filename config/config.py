@@ -9,6 +9,7 @@ class TelegramBotConfig:
     SPECIAL_CHANNEL_URL: str
     REQUIRED_REFERRAL_COUNT: int
     REQUIRED_CHANNELS: str
+    PHOTO_ID: str
     BOT_TOKEN: str
     ADMINS: str
     DEVID: str
@@ -40,6 +41,7 @@ def load_config() -> Config:
             BOT_URL=getenv("BOT_URL"),
             SPECIAL_CHANNEL_URL=getenv("SPECIAL_CHANNEL_URL"),
             REQUIRED_REFERRAL_COUNT=getenv("REQUIRED_REFERRAL_COUNT", int),
+            PHOTO_ID=getenv("PHOTO_ID"),
             REQUIRED_CHANNELS=getenv("REQUIRED_CHANNELS"),
         ),
         # postgres=PostgresConfig(

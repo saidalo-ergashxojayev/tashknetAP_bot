@@ -38,7 +38,7 @@ class SubscriptionMiddleware(BaseMiddleware):
                     state = data.get("state")
                     if state and referrer_id:
                         await state.update_data(referrer_id=referrer_id)
-                        
+
                 unsubscribed_channels = []
 
                 for channel in REQUIRED_CHANNELS:
@@ -56,13 +56,14 @@ class SubscriptionMiddleware(BaseMiddleware):
                         inline_keyboard=[])
 
                     for i, channel in enumerate(unsubscribed_channels, start=1):
-                        link = await self.bot.create_chat_invite_link(chat_id=f"{channel}")
-
+                        chat = await self.bot.get_chat(chat_id=f"{channel}")
+                        link = chat.invite_link
+                        
                         subscribe_keyboard.inline_keyboard.append(
                             [
                                 InlineKeyboardButton(
                                     text=f"📢 {i}-kanalga obuna bo'lish",
-                                    url=link.invite_link
+                                    url=link
                                 )
                             ]
                         )

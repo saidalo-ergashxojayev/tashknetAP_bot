@@ -123,7 +123,7 @@ async def verify_subscription(query: types.CallbackQuery, state: FSMContext):
     # Recheck subscriptions for each channel
     for channel in REQUIRED_CHANNELS:
         try:
-            chat_member = await bot.get_chat_member(chat_id=f"@{channel}", user_id=user_id)
+            chat_member = await bot.get_chat_member(chat_id=f"{channel}", user_id=user_id)
             if chat_member.status not in ("member", "administrator", "creator"):
                 unsubscribed_channels.append(channel)
         except TelegramBadRequest:
@@ -135,11 +135,13 @@ async def verify_subscription(query: types.CallbackQuery, state: FSMContext):
         updated_keyboard = InlineKeyboardMarkup(inline_keyboard=[])
         i = 1
         for channel in unsubscribed_channels:
+            chat = await query.bot.get_chat(chat_id=f"{channel}")
+            link = chat.invite_link
             updated_keyboard.inline_keyboard.append(
                 [
                     InlineKeyboardButton(
                         text=f"📢 {i}-kanalga obuna bo'lish",
-                        url=f"https://t.me/{channel}"
+                        url=link
                     )
                 ]
             )
