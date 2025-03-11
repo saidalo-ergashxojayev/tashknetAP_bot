@@ -1,0 +1,195 @@
+main.py:10 #INFO     [2025-03-11 13:33:02,832] - config.logger - Starting bot
+client.py:15 #INFO     [2025-03-11 13:33:03,403] - config.logger - Successfully connected to the SQLite database!
+dispatcher.py:527 #INFO     [2025-03-11 13:33:03,565] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-03-11 13:33:03,716] - aiogram.dispatcher - Run polling for bot @free_listening_marathon_bot id=7531140107 - 'FREE LISTENING MARATHON'
+subscription.py:30 #INFO     [2025-03-11 13:33:10,688] - config.logger - USER: 1856563190, Azizbek Qodirov
+dispatcher.py:172 #INFO     [2025-03-11 13:33:11,195] - aiogram.event - Update id=475224172 is not handled. Duration 517 ms by bot id=7531140107
+dispatcher.py:315 #ERROR    [2025-03-11 13:33:11,228] - aiogram.event - Cause exception while process update id=475224172 by bot id=7531140107
+TelegramBadRequest: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+Traceback (most recent call last):
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/src/middleware/subscription.py", line 93, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/src/handlers/start.py", line 59, in bot_start
+    await message.answer_photo(photo=msg.photo_id, caption=msg.text_1, parse_mode=ParseMode.HTML)
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 494, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/isaev/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+dispatcher.py:455 #WARNING  [2025-03-11 13:33:21,772] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-03-11 13:33:21,773] - aiogram.dispatcher - Polling stopped for bot @free_listening_marathon_bot id=7531140107 - 'FREE LISTENING MARATHON'
+dispatcher.py:554 #INFO     [2025-03-11 13:33:21,773] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-03-11 13:33:22,028] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-03-11 13:36:25,958] - config.logger - Starting bot
+client.py:15 #INFO     [2025-03-11 13:36:27,240] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-03-11 13:36:27,242] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-03-11 13:36:27,344] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-03-11 13:36:27,476] - aiogram.dispatcher - Run polling for bot @free_listening_marathon_bot id=7531140107 - 'FREE LISTENING MARATHON'
+subscription.py:30 #INFO     [2025-03-11 13:36:34,988] - config.logger - USER: 1856563190, Azizbek Qodirov
+dispatcher.py:172 #INFO     [2025-03-11 13:36:35,548] - aiogram.event - Update id=475224173 is not handled. Duration 622 ms by bot id=7531140107
+dispatcher.py:315 #ERROR    [2025-03-11 13:36:35,549] - aiogram.event - Cause exception while process update id=475224173 by bot id=7531140107
+TelegramBadRequest: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/middleware/subscription.py", line 93, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/app/src/handlers/start.py", line 59, in bot_start
+    await message.answer_photo(photo=msg.photo_id, caption=msg.text_1, parse_mode=ParseMode.HTML)
+  File "/usr/local/lib/python3.12/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/client/bot.py", line 494, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+subscription.py:30 #INFO     [2025-03-11 13:38:16,934] - config.logger - USER: 1856563190, Azizbek Qodirov
+subscription.py:91 #CRITICAL [2025-03-11 13:38:16,934] - config.logger - Error in SubscriptionMiddleware: 'NoneType' object has no attribute 'startswith'
+start.py:65 #INFO     [2025-03-11 13:38:16,934] - config.logger - Photo ID: AgACAgIAAxkBAAEBE2xn0DzI8F9TIAnEXHkRW1VgVd8j1gACbPAxG4aNgEq8ODVc02JZugEAAwIAA3kAAzYE
+dispatcher.py:172 #INFO     [2025-03-11 13:38:16,934] - aiogram.event - Update id=475224174 is handled. Duration 1 ms by bot id=7531140107
+dispatcher.py:455 #WARNING  [2025-03-11 13:40:35,323] - aiogram.dispatcher - Received SIGTERM signal
+dispatcher.py:359 #INFO     [2025-03-11 13:40:35,324] - aiogram.dispatcher - Polling stopped for bot @free_listening_marathon_bot id=7531140107 - 'FREE LISTENING MARATHON'
+dispatcher.py:554 #INFO     [2025-03-11 13:40:35,324] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-03-11 13:40:35,628] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-03-11 13:42:02,227] - config.logger - Starting bot
+client.py:15 #INFO     [2025-03-11 13:42:03,570] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-03-11 13:42:03,581] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-03-11 13:42:03,708] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-03-11 13:42:03,807] - aiogram.dispatcher - Run polling for bot @free_listening_marathon_bot id=7531140107 - 'FREE LISTENING MARATHON'
+subscription.py:30 #INFO     [2025-03-11 13:42:20,672] - config.logger - USER: 1856563190, Azizbek Qodirov
+subscription.py:91 #CRITICAL [2025-03-11 13:42:20,672] - config.logger - Error in SubscriptionMiddleware: 'NoneType' object has no attribute 'startswith'
+start.py:65 #INFO     [2025-03-11 13:42:20,672] - config.logger - Photo ID: AgACAgIAAxkBAAEBE2xn0DzI8F9TIAnEXHkRW1VgVd8j1gACbPAxG4aNgEq8ODVc02JZugEAAwIAA3kAAzYE
+dispatcher.py:172 #INFO     [2025-03-11 13:42:20,672] - aiogram.event - Update id=475224175 is handled. Duration 2 ms by bot id=7531140107
+dispatcher.py:455 #WARNING  [2025-03-11 13:42:27,229] - aiogram.dispatcher - Received SIGTERM signal
+dispatcher.py:359 #INFO     [2025-03-11 13:42:27,230] - aiogram.dispatcher - Polling stopped for bot @free_listening_marathon_bot id=7531140107 - 'FREE LISTENING MARATHON'
+dispatcher.py:554 #INFO     [2025-03-11 13:42:27,232] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-03-11 13:42:27,484] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-03-11 13:45:21,397] - config.logger - Starting bot
+client.py:15 #INFO     [2025-03-11 13:45:22,699] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-03-11 13:45:22,750] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-03-11 13:45:22,912] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-03-11 13:45:23,021] - aiogram.dispatcher - Run polling for bot @free_listening_marathon_bot id=7531140107 - 'FREE LISTENING MARATHON'
+subscription.py:30 #INFO     [2025-03-11 13:45:33,235] - config.logger - USER: 1856563190, Azizbek Qodirov
+dispatcher.py:172 #INFO     [2025-03-11 13:45:33,869] - aiogram.event - Update id=475224176 is handled. Duration 635 ms by bot id=7531140107
+subscription.py:30 #INFO     [2025-03-11 13:45:40,760] - config.logger - USER: 1856563190, Azizbek Qodirov
+dispatcher.py:172 #INFO     [2025-03-11 13:45:41,069] - aiogram.event - Update id=475224177 is handled. Duration 319 ms by bot id=7531140107
+subscription.py:30 #INFO     [2025-03-11 13:45:42,518] - config.logger - USER: 1856563190, Azizbek Qodirov
+dispatcher.py:172 #INFO     [2025-03-11 13:45:42,857] - aiogram.event - Update id=475224178 is handled. Duration 347 ms by bot id=7531140107
+dispatcher.py:455 #WARNING  [2025-03-11 13:45:55,957] - aiogram.dispatcher - Received SIGTERM signal
+dispatcher.py:359 #INFO     [2025-03-11 13:45:55,958] - aiogram.dispatcher - Polling stopped for bot @free_listening_marathon_bot id=7531140107 - 'FREE LISTENING MARATHON'
+dispatcher.py:554 #INFO     [2025-03-11 13:45:55,958] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-03-11 13:45:56,268] - config.logger - Connection to SQLite closed!

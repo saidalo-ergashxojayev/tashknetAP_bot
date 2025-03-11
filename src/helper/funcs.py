@@ -23,5 +23,5 @@ def create_start_text_text(short_link: str) -> StartTextResult:
 
         text_2="👋 <b>Do'stlaringizni</b> bu <b>loyiha</b> haqida xabardor qiling!\n\n" +
         "👆👆👆 Yuqoridagi <b>xabarni do'stlaringizga</b> yuboring va ularga bepul kurs da qatnashish imkoniyatini taqdim eting.\n\n" +
-        "<b>- Siz esa 5 ta do'stingizni</b> taklif qilib maxfiy kanalga kirishingiz mumkin! 🚀",
+        "<b>- Siz esa 7 ta do'stingizni</b> taklif qilib maxfiy kanalga kirishingiz mumkin! 🚀",
     )
