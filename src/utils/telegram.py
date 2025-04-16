@@ -17,6 +17,6 @@ async def notify_admins(bot: Bot):
             await bot.send_message(DEV, "Bot started!")
         except Exception as e:
             logger.log(
-                30, "Can't send start message to DEVID: " + DEV + " Err:" + e
+                30, "Can't send start message to DEVID: " + DEV + " Err:" + str(e)
             )
             pass
