@@ -458,3 +458,11 @@ dispatcher.py:455 #WARNING  [2025-04-16 23:57:23,622] - aiogram.dispatcher - Rec
 dispatcher.py:359 #INFO     [2025-04-16 23:57:23,623] - aiogram.dispatcher - Polling stopped for bot @IELTS_reading_booster_bot id=7692328299 - 'IELTS Reading Booster'
 dispatcher.py:554 #INFO     [2025-04-16 23:57:23,624] - aiogram.dispatcher - Polling stopped
 client.py:22 #INFO     [2025-04-16 23:57:23,877] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-04-17 00:24:20,679] - config.logger - Starting bot
+client.py:15 #INFO     [2025-04-17 00:24:21,318] - config.logger - Successfully connected to the SQLite database!
+dispatcher.py:527 #INFO     [2025-04-17 00:24:21,469] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-04-17 00:24:21,602] - aiogram.dispatcher - Run polling for bot @IELTS_reading_booster_bot id=7692328299 - 'IELTS Reading Booster'
+dispatcher.py:455 #WARNING  [2025-04-17 00:24:22,730] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-04-17 00:24:22,731] - aiogram.dispatcher - Polling stopped for bot @IELTS_reading_booster_bot id=7692328299 - 'IELTS Reading Booster'
+dispatcher.py:554 #INFO     [2025-04-17 00:24:22,732] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-04-17 00:24:22,983] - config.logger - Connection to SQLite closed!
