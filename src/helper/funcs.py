@@ -16,10 +16,11 @@ def create_start_text_text(short_link: str) -> StartTextResult:
         "- <b>Savol turlari</b> uchun maxsus 11 ta dars ✅\n" +
         "- <b>Practice</b> uchun qo'shimcha 9 ta dars ✅\n" +
         "- 4 ta ustozdan <b>'pichoqqa sop bo'ladigan'</b> maslahatlar ✅\n" +
-        "- Samarali texnikalar ✅\n\n" +
+        "- Samarali texnikalar ✅\n" +
+        "- <b>20 kunlik </b> ✅\n\n" +
         "Barchasi mutlaqo <b>TEKINGA!</b>\n\n" +
         "Bu kursning boshqa kurslardan farqi sizga faqat test emas, barcha Reading 9.0 uchun ko'nikmalar ipidan ignasigacha tushuntiriladi. 🚀\n\n" +
-        "Pastdagi havola orqali ro'yxatdan o'ting va marafonda bepul qatnashing 👇🏻" +
+        "Pastdagi havola orqali ro'yxatdan o'ting va marafonda bepul qatnashing 👇🏻\n" +
         short_link,
 
         text_2="👋 <b>Do'stlaringizni</b> bu <b>loyiha</b> haqida xabardor qiling!\n\n" +
