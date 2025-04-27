@@ -192,7 +192,10 @@ async def verify_subscription(query: types.CallbackQuery, state: FSMContext):
         except Exception as e:
             await query.bot.send_message(config.tg_bot.DEVID, "Error creating user in bot: "+config.tg_bot.BOT_URL+"\n\n"+str(e))
 
-    await query.message.delete()
+    try:
+        await query.message.delete()
+    except:
+        pass
     await state.clear()
     await query.message.answer(
         text="✅ Obunangiz tasdiqlandi! Endi botdan foydalanishingiz mumkin.",

@@ -98,9 +98,8 @@ async def send_message_handler(message: types.Message, state: FSMContext):
             )
             success += 1
             time.sleep(0.05)
-        except Exception as e:
+        except Exception:
             fail += 1
-            print(f"Error sending message to user {user['user_id']}: {e}")
     await message.answer(f"Xabar {success} ta foydalanuvchiga muvaffaqiyatli yuborildi, {fail} ta foydalanuvchiga yuborishda xatolik yuz berdi.")
     await state.clear()
 

@@ -466,3 +466,282 @@ dispatcher.py:455 #WARNING  [2025-04-17 00:24:22,730] - aiogram.dispatcher - Rec
 dispatcher.py:359 #INFO     [2025-04-17 00:24:22,731] - aiogram.dispatcher - Polling stopped for bot @IELTS_reading_booster_bot id=7692328299 - 'IELTS Reading Booster'
 dispatcher.py:554 #INFO     [2025-04-17 00:24:22,732] - aiogram.dispatcher - Polling stopped
 client.py:22 #INFO     [2025-04-17 00:24:22,983] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-04-27 09:07:18,015] - config.logger - Starting bot
+client.py:15 #INFO     [2025-04-27 09:07:18,900] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-04-27 09:07:18,906] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-04-27 09:07:19,062] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-04-27 09:07:19,248] - aiogram.dispatcher - Run polling for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+subscription.py:30 #INFO     [2025-04-27 09:08:30,572] - config.logger - USER: 1856563190, Azizbek Qodirov
+subscription.py:50 #WARNING  [2025-04-27 09:08:31,176] - config.logger - Error checking channel -1001500104999: Telegram server says - Bad Request: chat not found
+subscription.py:50 #WARNING  [2025-04-27 09:08:31,376] - config.logger - Error checking channel -1001899351673: Telegram server says - Bad Request: chat not found
+subscription.py:50 #WARNING  [2025-04-27 09:08:31,600] - config.logger - Error checking channel -1002134512908: Telegram server says - Bad Request: chat not found
+subscription.py:50 #WARNING  [2025-04-27 09:08:31,841] - config.logger - Error checking channel -1001355460300: Telegram server says - Bad Request: chat not found
+subscription.py:50 #WARNING  [2025-04-27 09:08:32,089] - config.logger - Error checking channel -1002005210137: Telegram server says - Bad Request: chat not found
+dispatcher.py:172 #INFO     [2025-04-27 09:08:32,441] - aiogram.event - Update id=373641076 is not handled. Duration 1871 ms by bot id=6045345780
+dispatcher.py:315 #ERROR    [2025-04-27 09:08:32,442] - aiogram.event - Cause exception while process update id=373641076 by bot id=6045345780
+TelegramBadRequest: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+Traceback (most recent call last):
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\lin\py-projects\free-course4\src\middleware\subscription.py", line 93, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\lin\py-projects\free-course4\src\handlers\start.py", line 59, in bot_start
+    await message.answer_photo(photo=msg.photo_id, caption=msg.text_1, parse_mode=ParseMode.HTML)
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\bot.py", line 453, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\aiohttp.py", line 185, in make_request
+    response = self.check_response(
+        bot=bot, method=method, status_code=resp.status, content=raw_result
+    )
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+subscription.py:30 #INFO     [2025-04-27 09:09:30,254] - config.logger - USER: 1856563190, Azizbek Qodirov
+subscription.py:91 #CRITICAL [2025-04-27 09:09:30,254] - config.logger - Error in SubscriptionMiddleware: 'NoneType' object has no attribute 'startswith'
+start.py:65 #INFO     [2025-04-27 09:09:30,255] - config.logger - Photo ID: AgACAgIAAxkBAAIDd2gN9En6NgPSPR-Bhwb_PQ2FUMeaAAKT6jEb5jRxSDtCYtRST59kAQADAgADeAADNgQ
+dispatcher.py:172 #INFO     [2025-04-27 09:09:30,255] - aiogram.event - Update id=373641077 is handled. Duration 3 ms by bot id=6045345780
+dispatcher.py:554 #INFO     [2025-04-27 09:09:41,968] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-04-27 09:09:42,221] - aiogram.dispatcher - Polling stopped for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+main.py:30 #INFO     [2025-04-27 09:09:42,224] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-04-27 09:09:46,100] - config.logger - Starting bot
+client.py:15 #INFO     [2025-04-27 09:09:46,759] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-04-27 09:09:46,761] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-04-27 09:09:46,931] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-04-27 09:09:47,095] - aiogram.dispatcher - Run polling for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+subscription.py:30 #INFO     [2025-04-27 09:09:54,482] - config.logger - USER: 1856563190, Azizbek Qodirov
+subscription.py:50 #WARNING  [2025-04-27 09:09:55,070] - config.logger - Error checking channel -1001500104999: Telegram server says - Bad Request: chat not found
+subscription.py:50 #WARNING  [2025-04-27 09:09:55,338] - config.logger - Error checking channel -1001899351673: Telegram server says - Bad Request: chat not found
+subscription.py:50 #WARNING  [2025-04-27 09:09:55,602] - config.logger - Error checking channel -1002134512908: Telegram server says - Bad Request: chat not found
+subscription.py:50 #WARNING  [2025-04-27 09:09:55,978] - config.logger - Error checking channel -1001355460300: Telegram server says - Bad Request: chat not found
+subscription.py:50 #WARNING  [2025-04-27 09:09:56,183] - config.logger - Error checking channel -1002005210137: Telegram server says - Bad Request: chat not found
+dispatcher.py:172 #INFO     [2025-04-27 09:09:56,701] - aiogram.event - Update id=373641078 is handled. Duration 2221 ms by bot id=6045345780
+dispatcher.py:554 #INFO     [2025-04-27 09:11:48,487] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-04-27 09:11:48,755] - aiogram.dispatcher - Polling stopped for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+main.py:30 #INFO     [2025-04-27 09:11:48,758] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-04-27 09:11:52,647] - config.logger - Starting bot
+client.py:15 #INFO     [2025-04-27 09:11:53,405] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-04-27 09:11:53,406] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-04-27 09:11:53,570] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-04-27 09:11:53,761] - aiogram.dispatcher - Run polling for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+subscription.py:30 #INFO     [2025-04-27 09:15:29,338] - config.logger - USER: 6040268947, a.
+subscription.py:50 #WARNING  [2025-04-27 09:15:29,950] - config.logger - Error checking channel 1001806635037: Telegram server says - Bad Request: chat not found
+dispatcher.py:172 #INFO     [2025-04-27 09:15:30,497] - aiogram.event - Update id=373641079 is handled. Duration 1162 ms by bot id=6045345780
+dispatcher.py:554 #INFO     [2025-04-27 09:15:50,357] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-04-27 09:15:50,619] - aiogram.dispatcher - Polling stopped for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+main.py:30 #INFO     [2025-04-27 09:15:50,622] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-04-27 09:15:56,952] - config.logger - Starting bot
+client.py:15 #INFO     [2025-04-27 09:15:57,685] - config.logger - Successfully connected to the SQLite database!
+dispatcher.py:527 #INFO     [2025-04-27 09:15:57,984] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-04-27 09:15:58,238] - aiogram.dispatcher - Run polling for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+subscription.py:30 #INFO     [2025-04-27 09:16:02,411] - config.logger - USER: 6040268947, a.
+dispatcher.py:172 #INFO     [2025-04-27 09:16:03,922] - aiogram.event - Update id=373641080 is handled. Duration 1513 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:16:12,828] - aiogram.event - Update id=373641081 is handled. Duration 811 ms by bot id=6045345780
+dispatcher.py:219 #ERROR    [2025-04-27 09:24:50,904] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+dispatcher.py:221 #WARNING  [2025-04-27 09:24:50,906] - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:24:51,911] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+dispatcher.py:221 #WARNING  [2025-04-27 09:24:51,911] - aiogram.dispatcher - Sleep for 1.289211 seconds and try again... (tryings = 1, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:24:53,211] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+dispatcher.py:221 #WARNING  [2025-04-27 09:24:53,212] - aiogram.dispatcher - Sleep for 1.685062 seconds and try again... (tryings = 2, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:24:54,916] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+dispatcher.py:221 #WARNING  [2025-04-27 09:24:54,917] - aiogram.dispatcher - Sleep for 2.301873 seconds and try again... (tryings = 3, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:24:57,229] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+dispatcher.py:221 #WARNING  [2025-04-27 09:24:57,230] - aiogram.dispatcher - Sleep for 2.970490 seconds and try again... (tryings = 4, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:25:00,206] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+dispatcher.py:221 #WARNING  [2025-04-27 09:25:00,207] - aiogram.dispatcher - Sleep for 3.919810 seconds and try again... (tryings = 5, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:25:04,137] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+dispatcher.py:221 #WARNING  [2025-04-27 09:25:04,138] - aiogram.dispatcher - Sleep for 5.169021 seconds and try again... (tryings = 6, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:25:09,316] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+dispatcher.py:221 #WARNING  [2025-04-27 09:25:09,316] - aiogram.dispatcher - Sleep for 4.833630 seconds and try again... (tryings = 7, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:25:14,165] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+dispatcher.py:221 #WARNING  [2025-04-27 09:25:14,165] - aiogram.dispatcher - Sleep for 4.734927 seconds and try again... (tryings = 8, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:25:18,904] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+dispatcher.py:221 #WARNING  [2025-04-27 09:25:18,904] - aiogram.dispatcher - Sleep for 4.806081 seconds and try again... (tryings = 9, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:25:23,722] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+dispatcher.py:221 #WARNING  [2025-04-27 09:25:23,722] - aiogram.dispatcher - Sleep for 5.025168 seconds and try again... (tryings = 10, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:25:28,762] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+dispatcher.py:221 #WARNING  [2025-04-27 09:25:28,763] - aiogram.dispatcher - Sleep for 5.068689 seconds and try again... (tryings = 11, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:25:33,848] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+dispatcher.py:221 #WARNING  [2025-04-27 09:25:33,851] - aiogram.dispatcher - Sleep for 4.895839 seconds and try again... (tryings = 12, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:25:38,749] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+dispatcher.py:221 #WARNING  [2025-04-27 09:25:38,750] - aiogram.dispatcher - Sleep for 5.112844 seconds and try again... (tryings = 13, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:25:43,873] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+dispatcher.py:221 #WARNING  [2025-04-27 09:25:43,874] - aiogram.dispatcher - Sleep for 4.981902 seconds and try again... (tryings = 14, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:25:48,874] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+dispatcher.py:221 #WARNING  [2025-04-27 09:25:48,875] - aiogram.dispatcher - Sleep for 5.063548 seconds and try again... (tryings = 15, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:25:53,948] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+dispatcher.py:221 #WARNING  [2025-04-27 09:25:53,948] - aiogram.dispatcher - Sleep for 5.039911 seconds and try again... (tryings = 16, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:25:59,004] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+dispatcher.py:221 #WARNING  [2025-04-27 09:25:59,004] - aiogram.dispatcher - Sleep for 4.912871 seconds and try again... (tryings = 17, bot id = 6045345780)
+dispatcher.py:233 #INFO     [2025-04-27 09:26:15,468] - aiogram.dispatcher - Connection established (tryings = 18, bot id = 6045345780)
+dispatcher.py:219 #ERROR    [2025-04-27 09:37:44,896] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+dispatcher.py:221 #WARNING  [2025-04-27 09:37:44,897] - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6045345780)
+dispatcher.py:233 #INFO     [2025-04-27 09:37:56,428] - aiogram.dispatcher - Connection established (tryings = 1, bot id = 6045345780)
+dispatcher.py:554 #INFO     [2025-04-27 09:40:56,460] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-04-27 09:40:56,720] - aiogram.dispatcher - Polling stopped for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+main.py:30 #INFO     [2025-04-27 09:40:56,726] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-04-27 09:46:17,594] - config.logger - Starting bot
+client.py:15 #INFO     [2025-04-27 09:46:18,400] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-04-27 09:46:18,401] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-04-27 09:46:18,594] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-04-27 09:46:18,886] - aiogram.dispatcher - Run polling for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+subscription.py:30 #INFO     [2025-04-27 09:46:21,087] - config.logger - USER: 1856563190, Azizbek Qodirov
+dispatcher.py:172 #INFO     [2025-04-27 09:46:24,481] - aiogram.event - Update id=373641082 is handled. Duration 3396 ms by bot id=6045345780
+subscription.py:30 #INFO     [2025-04-27 09:48:19,033] - config.logger - USER: 6040268947, a.
+dispatcher.py:172 #INFO     [2025-04-27 09:48:19,815] - aiogram.event - Update id=373641083 is handled. Duration 785 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:48:25,293] - aiogram.event - Update id=373641084 is handled. Duration 958 ms by bot id=6045345780
+dispatcher.py:554 #INFO     [2025-04-27 09:49:50,616] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-04-27 09:49:50,875] - aiogram.dispatcher - Polling stopped for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+main.py:30 #INFO     [2025-04-27 09:49:50,880] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-04-27 09:49:57,227] - config.logger - Starting bot
+client.py:15 #INFO     [2025-04-27 09:50:01,190] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-04-27 09:50:01,191] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-04-27 09:50:02,887] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-04-27 09:50:06,030] - aiogram.dispatcher - Run polling for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+dispatcher.py:172 #INFO     [2025-04-27 09:50:41,043] - aiogram.event - Update id=373641085 is handled. Duration 1087 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:50:54,126] - aiogram.event - Update id=373641086 is handled. Duration 796 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:51:00,786] - aiogram.event - Update id=373641087 is handled. Duration 902 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:51:24,147] - aiogram.event - Update id=373641088 is handled. Duration 715 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:51:28,765] - aiogram.event - Update id=373641089 is handled. Duration 936 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:51:45,837] - aiogram.event - Update id=373641090 is handled. Duration 980 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:51:50,316] - aiogram.event - Update id=373641091 is handled. Duration 1979 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:51:58,092] - aiogram.event - Update id=373641092 is handled. Duration 1497 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:52:00,971] - aiogram.event - Update id=373641093 is handled. Duration 655 ms by bot id=6045345780
+dispatcher.py:554 #INFO     [2025-04-27 09:52:05,807] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-04-27 09:52:06,063] - aiogram.dispatcher - Polling stopped for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+main.py:30 #INFO     [2025-04-27 09:52:06,067] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-04-27 09:52:22,871] - config.logger - Starting bot
+client.py:15 #INFO     [2025-04-27 09:52:23,520] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-04-27 09:52:23,522] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-04-27 09:52:23,727] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-04-27 09:52:23,917] - aiogram.dispatcher - Run polling for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+dispatcher.py:172 #INFO     [2025-04-27 09:52:25,677] - aiogram.event - Update id=373641094 is not handled. Duration 4 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:52:33,897] - aiogram.event - Update id=373641095 is not handled. Duration 5 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:52:41,966] - aiogram.event - Update id=373641096 is handled. Duration 1491 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:52:44,396] - aiogram.event - Update id=373641097 is handled. Duration 855 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:52:51,999] - aiogram.event - Update id=373641098 is handled. Duration 1010 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:52:55,116] - aiogram.event - Update id=373641099 is handled. Duration 939 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:52:57,014] - aiogram.event - Update id=373641100 is handled. Duration 565 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:53:18,152] - aiogram.event - Update id=373641101 is handled. Duration 569 ms by bot id=6045345780
+subscription.py:90 #CRITICAL [2025-04-27 09:53:22,030] - config.logger - Error in SubscriptionMiddleware: 'NoneType' object has no attribute 'startswith'
+dispatcher.py:172 #INFO     [2025-04-27 09:53:22,354] - aiogram.event - Update id=373641102 is handled. Duration 325 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:53:25,655] - aiogram.event - Update id=373641103 is handled. Duration 2060 ms by bot id=6045345780
+dispatcher.py:554 #INFO     [2025-04-27 09:54:51,683] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-04-27 09:54:51,949] - aiogram.dispatcher - Polling stopped for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+main.py:30 #INFO     [2025-04-27 09:54:51,952] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-04-27 09:54:57,206] - config.logger - Starting bot
+client.py:15 #INFO     [2025-04-27 09:54:58,403] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-04-27 09:54:58,405] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-04-27 09:54:58,585] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-04-27 09:54:58,755] - aiogram.dispatcher - Run polling for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+dispatcher.py:172 #INFO     [2025-04-27 09:54:59,968] - aiogram.event - Update id=373641104 is handled. Duration 946 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:55:07,783] - aiogram.event - Update id=373641105 is handled. Duration 509 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:55:11,873] - aiogram.event - Update id=373641106 is handled. Duration 1290 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:55:33,921] - aiogram.event - Update id=373641107 is handled. Duration 425 ms by bot id=6045345780
+subscription.py:91 #CRITICAL [2025-04-27 09:55:38,647] - config.logger - Error in SubscriptionMiddleware: 'NoneType' object has no attribute 'startswith'
+dispatcher.py:172 #INFO     [2025-04-27 09:55:38,852] - aiogram.event - Update id=373641108 is handled. Duration 225 ms by bot id=6045345780
+dispatcher.py:554 #INFO     [2025-04-27 09:56:06,067] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-04-27 09:56:06,324] - aiogram.dispatcher - Polling stopped for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+main.py:30 #INFO     [2025-04-27 09:56:06,328] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-04-27 09:56:12,920] - config.logger - Starting bot
+client.py:15 #INFO     [2025-04-27 09:56:13,676] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-04-27 09:56:13,677] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-04-27 09:56:13,905] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-04-27 09:56:14,234] - aiogram.dispatcher - Run polling for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+dispatcher.py:172 #INFO     [2025-04-27 09:56:15,630] - aiogram.event - Update id=373641109 is handled. Duration 1101 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:56:16,697] - aiogram.event - Update id=373641110 is handled. Duration 584 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:56:19,265] - aiogram.event - Update id=373641111 is handled. Duration 711 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:56:23,045] - aiogram.event - Update id=373641112 is handled. Duration 402 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:56:26,029] - aiogram.event - Update id=373641113 is handled. Duration 1309 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:56:57,043] - aiogram.event - Update id=373641114 is handled. Duration 713 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:57:04,902] - aiogram.event - Update id=373641115 is handled. Duration 459 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:57:07,829] - aiogram.event - Update id=373641116 is handled. Duration 1527 ms by bot id=6045345780
+dispatcher.py:554 #INFO     [2025-04-27 09:57:15,668] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-04-27 09:57:15,927] - aiogram.dispatcher - Polling stopped for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+main.py:30 #INFO     [2025-04-27 09:57:15,931] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-04-27 09:57:22,855] - config.logger - Starting bot
+client.py:15 #INFO     [2025-04-27 09:57:24,222] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-04-27 09:57:24,224] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-04-27 09:57:24,433] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-04-27 09:57:24,705] - aiogram.dispatcher - Run polling for bot @calculatorPy_robot id=6045345780 - 'Calculator'
+dispatcher.py:172 #INFO     [2025-04-27 09:57:26,328] - aiogram.event - Update id=373641117 is handled. Duration 1065 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:57:29,222] - aiogram.event - Update id=373641118 is handled. Duration 427 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:57:37,390] - aiogram.event - Update id=373641119 is handled. Duration 708 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:57:44,925] - aiogram.event - Update id=373641120 is handled. Duration 495 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:57:48,244] - aiogram.event - Update id=373641121 is handled. Duration 1496 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:58:05,449] - aiogram.event - Update id=373641122 is handled. Duration 1142 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:58:09,716] - aiogram.event - Update id=373641123 is not handled. Duration 3 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:58:20,269] - aiogram.event - Update id=373641124 is handled. Duration 686 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:58:23,364] - aiogram.event - Update id=373641125 is handled. Duration 783 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:58:29,981] - aiogram.event - Update id=373641126 is handled. Duration 5682 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:58:30,608] - aiogram.event - Update id=373641127 is handled. Duration 1294 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:58:33,549] - aiogram.event - Update id=373641128 is handled. Duration 1117 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:58:35,398] - aiogram.event - Update id=373641129 is handled. Duration 971 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:58:38,098] - aiogram.event - Update id=373641130 is handled. Duration 1318 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:58:44,667] - aiogram.event - Update id=373641131 is handled. Duration 835 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:58:47,267] - aiogram.event - Update id=373641132 is handled. Duration 686 ms by bot id=6045345780
+dispatcher.py:172 #INFO     [2025-04-27 09:58:49,021] - aiogram.event - Update id=373641133 is handled. Duration 705 ms by bot id=6045345780

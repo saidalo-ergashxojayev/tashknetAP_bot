@@ -27,10 +27,9 @@ class SubscriptionMiddleware(BaseMiddleware):
         user_id = None
         if isinstance(event, Message):
             user_id = event.from_user.id
-        logger.log(20, "USER: "+str(user_id)+", "+event.from_user.full_name)
         if user_id:
             try:
-                if isinstance(event, Message) and event.text.startswith("/start"):
+                if isinstance(event, Message) and event.text and event.text.startswith("/start"):
                     command_args = event.text.split(" ", maxsplit=1)
                     referrer_id = command_args[1] if len(
                         command_args) > 1 else None
