@@ -27,6 +27,6 @@ def create_start_text_text(short_link: str) -> StartTextResult:
         short_link,
 
         text_2="<b>🤝Doʻstlaringizni marafonga taklif qiling!</b>\n\n" +
-        "👆 Yuqoridagi xabarni doʻstlaringizga ulashing va ularga ham <b>bepul writing marafonda</b> qatnashish <b>imkoniyatini</b> bering." +
+        "👆 Yuqoridagi xabarni doʻstlaringizga ulashing va ularga ham <b>bepul writing marafonda</b> qatnashish <b>imkoniyatini</b> bering.\n\n" +
         "👥 Siz esa <b>atiga 1 ta</b> ingliz tili o'qiydigan <b>doʻstingizni taklif</b> qiling va yopiq maxfiy kanalga qoʻshiling!"
     )
