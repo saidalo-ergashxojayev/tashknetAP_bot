@@ -9,21 +9,24 @@ def create_start_text_text(short_link: str) -> StartTextResult:
     return StartTextResult(
         photo_id=config.tg_bot.PHOTO_ID,
 
-        text_1="Assalomu alaykum!\n\n" +
-        "<b>READING 9.0 egalari tomonidan READING BOOSTER 1.0!!!</b>\n\n" +
-        "⚠️ Agarda sizning ham Reading balingiz <b>5.0-6.0</b> da qotib qolgan bo'lsa, bu kurs aynan siz uchun. <b>Reading Expertlar</b> bilan balingizni <b>7.0+</b> gacha olib chiqing.\n\n" +
-        "🔖 Kursning afzalliklari:\n" +
-        "- <b>Savol turlari</b> uchun maxsus 11 ta dars ✅\n" +
-        "- <b>Practice</b> uchun qo'shimcha 9 ta dars ✅\n" +
-        "- 4 ta ustozdan <b>'pichoqqa sop bo'ladigan'</b> maslahatlar ✅\n" +
-        "- Samarali texnikalar ✅\n" +
-        "- <b>20 kunlik to'liq nazorat</b> ✅\n\n" +
-        "Barchasi mutlaqo <b>TEKINGA!</b>\n\n" +
-        "Bu kursning boshqa kurslardan farqi sizga faqat test emas, barcha Reading 9.0 uchun ko'nikmalar ipidan ignasigacha tushuntiriladi. 🚀\n\n" +
-        "Pastdagi havola orqali ro'yxatdan o'ting va marafonda bepul qatnashing 👇🏻\n" +
+        text_1="<b>🧨 8 kunlik writing marafonda ishtirok eting va writing balingizni 7+ ga oshiring!</b>\n\n" +
+        "4 nafar IELTS eksperti bilan intensiv BEPUL marafonda ishtirok eting!\n\n" +
+        "🗓 Marafonda nimalar oʻrgatiladi?\n" +
+        "— Task 1 ning barcha grafik turlari (maps, pie, table, process, periodicals);\n" +
+        "— Task 2 essay yozish boʻyicha strukturalar\n" +
+        "— Har kunlik jonli darslar + amaliy mashqlar;\n" +
+        "— 8 kun ichida writingdan eng kerakli bilimlarga ega boʻlasiz.\n\n" +
+        "<b>👨‍🏫 Ustozlar:</b>\n" +
+        "— Laziz Atabayev (Writing 9.0)\n" +
+        "— Fazliddin G‘iyosov (W 8.5)\n" +
+        "— Nurulloh Kamalkhujaev (W 8.0)\n" +
+        "— Saidakhror Abdukodirov (W 7.5)\n\n" +
+        "<b>🆓 Bularning barchasi — BEPUL!</b>\n" + 
+        "Faqat doʻstlaringizni taklif qilsangiz kifoya!\n\n" +
+        "👇 Hozir ro‘yxatdan o‘ting va marafon kanaliga qo‘shiling!\n" +
         short_link,
 
-        text_2="👋 <b>Do'stlaringizni</b> bu <b>loyiha</b> haqida xabardor qiling!\n\n" +
-        "👆👆👆 Yuqoridagi <b>xabarni do'stlaringizga</b> yuboring va ularga bepul kurs da qatnashish imkoniyatini taqdim eting.\n\n" +
-        "<b>- Siz esa 7 ta do'stingizni</b> taklif qilib maxfiy kanalga kirishingiz mumkin! 🚀",
+        text_2="<b>🤝Doʻstlaringizni marafonga taklif qiling!</b>\n\n" +
+        "👆 Yuqoridagi xabarni doʻstlaringizga ulashing va ularga ham <b>bepul writing marafonda</b> qatnashish <b>imkoniyatini</b> bering." +
+        "👥 Siz esa <b>atiga 1 ta</b> ingliz tili o'qiydigan <b>doʻstingizni taklif</b> qiling va yopiq maxfiy kanalga qoʻshiling!"
     )
