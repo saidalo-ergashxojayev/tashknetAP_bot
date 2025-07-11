@@ -1,0 +1,4 @@
+dispatcher.py:455 #WARNING  [2025-07-11 01:05:57,298] - aiogram.dispatcher - Received SIGINT signal
+dispatcher.py:359 #INFO     [2025-07-11 01:05:57,299] - aiogram.dispatcher - Polling stopped for bot @writing_marathon_bot id=7796597922 - 'Writing Marathon'
+dispatcher.py:554 #INFO     [2025-07-11 01:05:57,299] - aiogram.dispatcher - Polling stopped
+client.py:22 #INFO     [2025-07-11 01:05:57,550] - config.logger - Connection to SQLite closed!
