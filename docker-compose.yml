@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: free_course_bot_isaev
+    container_name: muallimsaid_listening_course_bot
     restart: always
     volumes:
       - ./bot_logs.log:/app/bot_logs.log
