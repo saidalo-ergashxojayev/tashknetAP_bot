@@ -1,4 +1,26 @@
-dispatcher.py:455 #WARNING  [2025-07-11 01:05:57,298] - aiogram.dispatcher - Received SIGINT signal
-dispatcher.py:359 #INFO     [2025-07-11 01:05:57,299] - aiogram.dispatcher - Polling stopped for bot @writing_marathon_bot id=7796597922 - 'Writing Marathon'
-dispatcher.py:554 #INFO     [2025-07-11 01:05:57,299] - aiogram.dispatcher - Polling stopped
-client.py:22 #INFO     [2025-07-11 01:05:57,550] - config.logger - Connection to SQLite closed!
+main.py:10 #INFO     [2025-07-30 21:21:22,129] - config.logger - Starting bot
+client.py:15 #INFO     [2025-07-30 21:21:22,763] - config.logger - Successfully connected to the SQLite database!
+client.py:45 #ERROR    [2025-07-30 21:21:22,764] - config.logger - SQLite error: table users already exists
+dispatcher.py:527 #INFO     [2025-07-30 21:21:22,905] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-07-30 21:21:23,090] - aiogram.dispatcher - Run polling for bot @listening_experts_bot id=8113294936 - 'Listening Marathon'
+subscription.py:49 #WARNING  [2025-07-30 21:21:32,481] - config.logger - Error checking channel -1001567892194: Telegram server says - Bad Request: chat not found
+subscription.py:49 #WARNING  [2025-07-30 21:21:32,631] - config.logger - Error checking channel  -1001177274186: Telegram server says - Bad Request: chat not found
+subscription.py:49 #WARNING  [2025-07-30 21:21:32,769] - config.logger - Error checking channel  -1001499730354: Telegram server says - Bad Request: chat not found
+subscription.py:49 #WARNING  [2025-07-30 21:21:32,900] - config.logger - Error checking channel  -1002134512908: Telegram server says - Bad Request: chat not found
+dispatcher.py:172 #INFO     [2025-07-30 21:21:33,289] - aiogram.event - Update id=624172381 is handled. Duration 1224 ms by bot id=8113294936
+dispatcher.py:172 #INFO     [2025-07-30 21:21:35,208] - aiogram.event - Update id=624172382 is not handled. Duration 3 ms by bot id=8113294936
+subscription.py:49 #WARNING  [2025-07-30 21:21:38,404] - config.logger - Error checking channel -1001567892194: Telegram server says - Bad Request: chat not found
+subscription.py:49 #WARNING  [2025-07-30 21:21:38,540] - config.logger - Error checking channel  -1001177274186: Telegram server says - Bad Request: chat not found
+subscription.py:49 #WARNING  [2025-07-30 21:21:38,678] - config.logger - Error checking channel  -1001499730354: Telegram server says - Bad Request: chat not found
+subscription.py:49 #WARNING  [2025-07-30 21:21:38,800] - config.logger - Error checking channel  -1002134512908: Telegram server says - Bad Request: chat not found
+dispatcher.py:172 #INFO     [2025-07-30 21:21:39,165] - aiogram.event - Update id=624172383 is handled. Duration 1038 ms by bot id=8113294936
+subscription.py:49 #WARNING  [2025-07-30 21:21:40,376] - config.logger - Error checking channel -1001567892194: Telegram server says - Bad Request: chat not found
+subscription.py:49 #WARNING  [2025-07-30 21:21:40,508] - config.logger - Error checking channel  -1001177274186: Telegram server says - Bad Request: chat not found
+subscription.py:49 #WARNING  [2025-07-30 21:21:40,645] - config.logger - Error checking channel  -1001499730354: Telegram server says - Bad Request: chat not found
+subscription.py:49 #WARNING  [2025-07-30 21:21:40,780] - config.logger - Error checking channel  -1002134512908: Telegram server says - Bad Request: chat not found
+dispatcher.py:172 #INFO     [2025-07-30 21:21:40,963] - aiogram.event - Update id=624172384 is handled. Duration 738 ms by bot id=8113294936
+dispatcher.py:172 #INFO     [2025-07-30 21:21:41,799] - aiogram.event - Update id=624172385 is handled. Duration 147 ms by bot id=8113294936
+dispatcher.py:172 #INFO     [2025-07-30 21:21:47,033] - aiogram.event - Update id=624172386 is handled. Duration 148 ms by bot id=8113294936
+dispatcher.py:554 #INFO     [2025-07-30 21:23:09,146] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-07-30 21:23:09,410] - aiogram.dispatcher - Polling stopped for bot @listening_experts_bot id=8113294936 - 'Listening Marathon'
+main.py:30 #INFO     [2025-07-30 21:23:09,414] - config.logger - Bot stopped
