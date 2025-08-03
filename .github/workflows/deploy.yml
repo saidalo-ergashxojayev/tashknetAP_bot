@@ -14,18 +14,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Write PEM file from secret
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_aws.pem
-          chmod 600 ~/.ssh/id_aws.pem
-
       - name: Deploy Application
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          key_path: /home/runner/.ssh/id_aws.pem
+          key: ${{ secrets.SSH_KEY }} 
           port: ${{ secrets.SSH_PORT }}
           script: |
             # Define ANSI color codes
