@@ -55,7 +55,7 @@ jobs:
 
             log_info "---------------- STOPPING BOT, DOCKER COMPOSE DOWN ----------------"
             sudo docker compose down
-            log_error "---------------- BOT STOPPED ----------------"
+            log_error "----------------  BOT STOPPED ----------------"
             log_info "---------------- STARTING BOT, DOCKER COMPOSE UP ----------------"
             sudo docker compose up --build -d
             log_success "---------------- BOT STARTED ----------------"
