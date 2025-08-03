@@ -42,6 +42,6 @@ Ro’yxatdan o’ting va yopiq kanal linkiga ega bo’ling:
 
 👆 Yuqoridagi xabarni doʻstlaringizga ulashing va ularga ham <b>bepul speaking marafonda</b> qatnashish <b>imkoniyatini</b> bering.
 
-👥 Siz esa <b>atiga 1 ta</b> ingliz tili o'qiydigan <b>doʻstingizni taklif</b> qiling va yopiq maxfiy kanalga qoʻshiling!
+👥 Siz esa <b>atiga 3 ta</b> ingliz tili o'qiydigan <b>doʻstingizni taklif</b> qiling va yopiq maxfiy kanalga qoʻshiling!
 """
     )

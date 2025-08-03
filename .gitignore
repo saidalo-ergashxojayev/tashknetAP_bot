@@ -1,5 +1,5 @@
 venv/
 __pycache__/
-users.db
-bot_logs.log
+# users.db
+# bot_logs.log
 # !bot_logs.log
