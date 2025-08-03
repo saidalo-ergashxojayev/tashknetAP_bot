@@ -48,7 +48,7 @@ jobs:
               log_success "---------------- CODE PULLED FROM GITHUB -----------------"
             else
               log_info "---------------- GIT REPO DOES NOT EXIST, CLONING REPO ----------------"
-              git clone git@github.com:azizbek-qodirov/speaking-saeed.git .
+              git clone git@github.com:azizbek-qodirov/speaking_saeed.git .
               git pull origin main
               log_success "---------------- REPO CLONED -----------------"
             fi
