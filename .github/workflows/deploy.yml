@@ -39,8 +39,8 @@ jobs:
             }
             # Pull latest code from GitHub
             log_info "---------------- PULLING CODE FROM GITHUB ----------------"
-            mkdir -p projects/speaking-saeed
-            cd projects/speaking-saeed
+            mkdir -p projects/nozimjon-marathon
+            cd projects/nozimjon-marathon
 
             if [ -d ".git" ]; then
               log_info "---------------- GIT REPO EXISTS, PULLING LATEST CODE ----------------"
@@ -48,7 +48,7 @@ jobs:
               log_success "---------------- CODE PULLED FROM GITHUB -----------------"
             else
               log_info "---------------- GIT REPO DOES NOT EXIST, CLONING REPO ----------------"
-              git clone git@github.com:azizbek-qodirov/speaking_saeed.git .
+              git clone git@github.com:azizbek-qodirov/nozimjon_marathon.git .
               git pull origin main
               log_success "---------------- REPO CLONED -----------------"
             fi

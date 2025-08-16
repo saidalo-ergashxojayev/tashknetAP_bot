@@ -5,43 +5,35 @@ config = load_config()
 
 
 def create_start_text_text(short_link: str) -> StartTextResult:
+    photos = config.tg_bot.PHOTO_ID.split(",")
 
     return StartTextResult(
-        photo_id=config.tg_bot.PHOTO_ID,
+        photo_ids=photos,
         text_1="""
-<b>🚀8 kunlik INTENSIVE SPEAKING MARAFON da qatnashing va gapirish qolbiliyatingizni oshiring</b>
+🚀 Maxsus <b>INSPERA 1.0</b>  kursimizda o'qib <b>READING&LISTENING</b> va qismidan <b>7.0-8.0+</b> olish imkoniyatiga ega bo'ling!
 
-<b>IELTS</b> hamda <b>MULTILEVEL</b> ustozlaridan darslar!
+<b>10-kun davomida sizga nimalar taqdim etamiz?!</b>
 
-⚡️ Bu 8 kun davomida siz
+— Naq 10 ta <b>JONLI DARSLAR</b>
+— <b>10+10</b> IMTIXONDA tushgan materiallar
+— Maxsus saralangan <b>Article(Maqolalar) va Podcastlar</b>
+— Eng <b>ACTIVE</b> studenlarga maxsus <b>BEPUL SPEAKING</b> va <b>WRITING  MOCK</b>
 
-— IELTS Speaking barcha partlari 
-— Pronunciation 
-— Fluency
-— Vocabulary
-— Grammar
-— Public speechinggiz
+👨‍🏫 <b>INSTRUCTORS</b>: 
+<a href="https://t.me/teachernazim">TEACHER NAZIM (Mr.Nozimjon)</a>: <b>READING 9.0 x 2</b> 
+<a href="https://t.me/diyorbek_8_5">Mr.Diyorbek</a>: LISTENING 9.0
 
-<b>ni keyingi levelga olib chiqa olasiz</b>
+🆓 Bularni hammasi <b>MUTLAQO BEPUL</b>
 
-<b>🧑‍🏫👩🏻‍🏫 Instructorlar:</b>
-
-— Jumaboyev Begzod (S 9.0)
-— Urolova Ruxshona ( S 9.0)
-— Kasimova Asal (S 8.5)
-— Olimov Saydullo (S 8.0)
-
-<b>🆓 Bularning barchasi — BEPUL!</b>
-
-Ro’yxatdan o’ting va yopiq kanal linkiga ega bo’ling:
+🔗 Joyingizni hoziroq band qilish uchun link:
 """ +
         short_link,
 
         text_2="""
 <b>🤝Doʻstlaringizni marafonga taklif qiling!</b>
 
-👆 Yuqoridagi xabarni doʻstlaringizga ulashing va ularga ham <b>bepul speaking marafonda</b> qatnashish <b>imkoniyatini</b> bering.
+👆 Yuqoridagi xabarni doʻstlaringizga ulashing va ularga ham <b>marafonimizda</b> qatnashish <b>imkoniyatini</b> bering.
 
-👥 Siz esa <b>atiga 3 ta</b> ingliz tili o'qiydigan <b>doʻstingizni taklif</b> qiling va yopiq maxfiy kanalga qoʻshiling!
+👥 Siz esa <b>atiga 3 ta</b> ingliz tili o'qiydigan <b>do'stingizni taklif</b> qiling va yopiq maxfiy kanalga qoʻshiling!
 """
     )

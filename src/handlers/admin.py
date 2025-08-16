@@ -4,6 +4,7 @@ from aiogram import types
 from aiogram.enums.parse_mode import ParseMode
 from aiogram.fsm.context import FSMContext
 from aiogram.filters.command import Command
+from aiogram.utils.media_group import MediaGroupBuilder
 from aiogram.filters import StateFilter
 from config import load_config
 from loader import db
@@ -32,10 +33,14 @@ async def get_stat(message: types.Message):
 @router.message(lambda message: message.text == "🔙 Orqaga", AdminFilter(), StateFilter(None))
 async def back_menu(message: types.Message):
     user_id = message.from_user.id
-
     short_link = config.tg_bot.BOT_URL + "?start=" + str(user_id)
+
     msg = create_start_text_text(short_link)
-    await message.answer_photo(photo=msg.photo_id, caption=msg.text_1, parse_mode=ParseMode.HTML)
+    media_group_builder = MediaGroupBuilder(caption=msg.text_1)
+    for photo_id in msg.photo_ids:
+        media_group_builder.add_photo(photo_id)
+    media_group = media_group_builder.build()
+    await message.answer_media_group(media=media_group)
     await message.answer(text=msg.text_2, reply_markup=MenuKeyboard, parse_mode=ParseMode.HTML)
 
 
@@ -72,8 +77,9 @@ async def confirm_message_handler(message: types.Message, state: FSMContext):
         ],
         resize_keyboard=True
     )
-    await state.update_data(message_id = message.message_id)
+    await state.update_data(message_id=message.message_id)
     await message.answer("Xabarni yuborishni tasdiqlaysizmi?", reply_markup=keyboard)
+
 
 @router.message(StateFilter(sg.confirmation), lambda message: message.text == "❌ Yo'q")
 async def cancel_message_handler(message: types.Message, state: FSMContext):
@@ -103,16 +109,18 @@ async def send_message_handler(message: types.Message, state: FSMContext):
     await message.answer(f"Xabar {success} ta foydalanuvchiga muvaffaqiyatli yuborildi, {fail} ta foydalanuvchiga yuborishda xatolik yuz berdi.")
     await state.clear()
 
+
 @router.message(Command("logs"))
 async def get_logs(message: types.Message):
     if not str(message.from_user.id) in config.tg_bot.DEVID.split(","):
         return
     await message.answer("Sending logs...")
-    
+
  # Send the log file
-    log_file = types.FSInputFile("bot_logs.log")  # Pass the file path as a string
+    # Pass the file path as a string
+    log_file = types.FSInputFile("bot_logs.log")
     await message.bot.send_document(message.chat.id, log_file)
-    
+
     # Send the database file
     db_file = types.FSInputFile("users.db")  # Pass the file path as a string
     await message.bot.send_document(message.chat.id, db_file)

@@ -3,6 +3,7 @@ from aiogram.exceptions import TelegramBadRequest
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.enums.parse_mode import ParseMode
 from aiogram.fsm.context import FSMContext
+from aiogram.utils.media_group import MediaGroupBuilder
 from config import load_config
 from src.keyboards.default.menuKeyboard import MenuKeyboard
 from src.helper.funcs import create_start_text_text
@@ -22,9 +23,12 @@ async def starty_link_handler(message: types.Message):
     short_link = config.tg_bot.BOT_URL + "?start=" + str(user_id)
 
     msg = create_start_text_text(short_link)
-    await message.answer_photo(photo=msg.photo_id, caption=msg.text_1, parse_mode=ParseMode.HTML)
+    media_group_builder = MediaGroupBuilder(caption=msg.text_1)
+    for photo_id in msg.photo_ids:
+        media_group_builder.add_photo(photo_id)
+    media_group = media_group_builder.build()
+    await message.answer_media_group(media=media_group)
     await message.answer(text=msg.text_2, reply_markup=MenuKeyboard, parse_mode=ParseMode.HTML)
-
 
 @router.message(lambda message: message.text == "🚀 Maxsus linkni olish")
 async def get_link_handler(message: types.Message):

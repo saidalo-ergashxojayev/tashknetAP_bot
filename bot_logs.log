@@ -1,3 +1,0 @@
-dispatcher.py:554 #INFO     [2025-08-03 14:31:25,994] - aiogram.dispatcher - Polling stopped
-dispatcher.py:359 #INFO     [2025-08-03 14:31:26,256] - aiogram.dispatcher - Polling stopped for bot @speaking_marathon_bot id=8388741512 - 'Speaking Marathon'
-main.py:30 #INFO     [2025-08-03 14:31:26,260] - config.logger - Bot stopped

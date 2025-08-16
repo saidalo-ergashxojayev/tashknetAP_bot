@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: saeed_speaking_course_bot
+    container_name: nozimjon_marathon_bot
     restart: always
     volumes:
       - ./bot_logs.log:/app/bot_logs.log
