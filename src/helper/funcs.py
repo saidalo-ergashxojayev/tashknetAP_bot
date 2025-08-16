@@ -34,6 +34,6 @@ def create_start_text_text(short_link: str) -> StartTextResult:
 
 👆 Yuqoridagi xabarni doʻstlaringizga ulashing va ularga ham <b>marafonimizda</b> qatnashish <b>imkoniyatini</b> bering.
 
-👥 Siz esa <b>atiga 3 ta</b> ingliz tili o'qiydigan <b>do'stingizni taklif</b> qiling va yopiq maxfiy kanalga qoʻshiling!
+👥 Siz esa <b>atiga 4 ta</b> ingliz tili o'qiydigan <b>do'stingizni taklif</b> qiling va yopiq maxfiy kanalga qoʻshiling!
 """
     )
