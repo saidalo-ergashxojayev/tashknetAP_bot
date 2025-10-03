@@ -5,29 +5,20 @@ from .base import getenv
 
 @dataclass
 class TelegramBotConfig:
-    BOT_URL: str
-    SPECIAL_CHANNEL_URL: str
-    REQUIRED_REFERRAL_COUNT: int
-    REQUIRED_CHANNELS: str
-    PHOTO_ID: str
     BOT_TOKEN: str
     ADMINS: str
     DEVID: str
 
 
-# @dataclass
-# class PostgresConfig:
-#     DBUSER: str
-#     DBPASSWORD: str
-#     HOST: str
-#     PORT: int
-#     DBNAME: str
+@dataclass
+class APIConfig:
+    OPEN_WEATHER_APPID: str
 
 
 @dataclass
 class Config:
     tg_bot: TelegramBotConfig
-    # postgres: PostgresConfig
+    api: APIConfig
 
 
 def load_config() -> Config:
@@ -38,17 +29,8 @@ def load_config() -> Config:
             BOT_TOKEN=getenv("BOT_TOKEN"),
             ADMINS=getenv("ADMINS"),
             DEVID=getenv("DEVID"),
-            BOT_URL=getenv("BOT_URL"),
-            SPECIAL_CHANNEL_URL=getenv("SPECIAL_CHANNEL_URL"),
-            REQUIRED_REFERRAL_COUNT=getenv("REQUIRED_REFERRAL_COUNT", int),
-            PHOTO_ID=getenv("PHOTO_ID"),
-            REQUIRED_CHANNELS=getenv("REQUIRED_CHANNELS"),
         ),
-        # postgres=PostgresConfig(
-        #     DBUSER=getenv("DBUSER"),
-        #     DBPASSWORD=getenv("DBPASSWORD"),
-        #     HOST=getenv("HOST"),
-        #     PORT=getenv("PORT"),
-        #     DBNAME=getenv("DBNAME"),
-        # )
+        api=APIConfig(
+            OPEN_WEATHER_APPID=getenv("OPEN_WEATHER_API"),
+        ),
     )

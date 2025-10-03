@@ -5,11 +5,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: nozimjon_marathon_bot
+    container_name: tashkentAP_bot
     restart: always
     volumes:
       - ./bot_logs.log:/app/bot_logs.log
-      - ./users.db:/app/users.db
     environment:
       - PYTHONUNBUFFERED=1
     command: python main.py

@@ -1,0 +1,1189 @@
+dispatcher.py:172 #INFO     [2025-10-02 12:01:35,863] - aiogram.event - Update id=497009558 is handled. Duration 279939 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 12:05:10,599] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 12:05:10,866] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 12:05:10,868] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 12:08:22,014] - config.logger - Starting bot
+telegram.py:19 #WARNING  [2025-10-02 12:08:22,831] - config.logger - Can't send start message to DEVID: 1856563190 Err:Telegram server says - Flood control exceeded on method 'SendMessage' in chat 1856563190. Retry in 42 seconds.
+Original description: Too Many Requests: retry after 42
+(background on this error at: https://core.telegram.org/bots/faq#my-bot-is-hitting-limits-how-do-i-avoid-this)
+dispatcher.py:527 #INFO     [2025-10-02 12:08:23,059] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 12:08:23,173] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 12:08:24,100] - aiogram.event - Update id=497009559 is handled. Duration 364 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 12:08:25,049] - aiogram.event - Update id=497009560 is handled. Duration 127 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 12:08:27,544] - aiogram.event - Update id=497009561 is not handled. Duration 425 ms by bot id=8314422399
+dispatcher.py:315 #ERROR    [2025-10-02 12:08:27,544] - aiogram.event - Cause exception while process update id=497009561 by bot id=8314422399
+TypeError: a coroutine was expected, got None
+Traceback (most recent call last):
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\python\pollution-bot\src\handlers\select_district.py", line 33, in district_selection_handler
+    animation_task = asyncio.create_task(
+        await animate_loading(res, "Loading", 0.1, stop_event)
+    )
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 410, in create_task
+    task = loop.create_task(coro, name=name)
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 468, in create_task
+    task = tasks.Task(coro, loop=self, name=name, context=context)
+TypeError: a coroutine was expected, got None
+dispatcher.py:554 #INFO     [2025-10-02 12:10:45,958] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 12:10:46,210] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 12:10:46,213] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 12:10:50,397] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 12:10:51,370] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 12:10:51,488] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 12:10:59,095] - aiogram.event - Update id=497009562 is handled. Duration 367 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 12:11:00,003] - aiogram.event - Update id=497009563 is handled. Duration 146 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 12:11:06,204] - aiogram.event - Update id=497009564 is handled. Duration 5459 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 12:15:32,218] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 12:15:32,480] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 12:15:32,482] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 12:15:36,646] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 12:15:38,348] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 12:15:38,485] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 12:15:42,211] - aiogram.event - Update id=497009565 is handled. Duration 449 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 12:15:43,132] - aiogram.event - Update id=497009566 is handled. Duration 151 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 12:15:44,965] - aiogram.event - Update id=497009567 is not handled. Duration 904 ms by bot id=8314422399
+dispatcher.py:315 #ERROR    [2025-10-02 12:15:44,967] - aiogram.event - Cause exception while process update id=497009567 by bot id=8314422399
+Exception: API request failed: 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5//data/2.5/air_pollution?lat=69.34556&lon=41.23778&appid=89258c3b7a118c45a2478c12b5bbd706
+Traceback (most recent call last):
+  File "D:\python\pollution-bot\src\helper\open_weather.py", line 29, in make_request
+    response.raise_for_status()  # Raise exception for bad status codes
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5//data/2.5/air_pollution?lat=69.34556&lon=41.23778&appid=89258c3b7a118c45a2478c12b5bbd706
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\python\pollution-bot\src\handlers\select_district.py", line 39, in district_selection_handler
+    result = await ow.get_air_pollution(lat=lat, lon=lon)
+                   ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "D:\python\pollution-bot\src\helper\open_weather.py", line 51, in get_air_pollution
+    return self.make_request(endpoint, params)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "D:\python\pollution-bot\src\helper\open_weather.py", line 32, in make_request
+    raise Exception(f"API request failed: {str(e)}")
+Exception: API request failed: 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5//data/2.5/air_pollution?lat=69.34556&lon=41.23778&appid=89258c3b7a118c45a2478c12b5bbd706
+dispatcher.py:554 #INFO     [2025-10-02 12:17:09,119] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 12:17:09,379] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 12:17:10,838] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 12:17:13,384] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 12:17:14,239] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 12:17:14,380] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 12:17:14,941] - aiogram.event - Update id=497009568 is handled. Duration 403 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 12:17:16,180] - aiogram.event - Update id=497009569 is handled. Duration 177 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 12:17:18,190] - aiogram.event - Update id=497009570 is not handled. Duration 1045 ms by bot id=8314422399
+dispatcher.py:315 #ERROR    [2025-10-02 12:17:18,191] - aiogram.event - Cause exception while process update id=497009570 by bot id=8314422399
+TypeError: object dict can't be used in 'await' expression
+Traceback (most recent call last):
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\python\pollution-bot\src\handlers\select_district.py", line 39, in district_selection_handler
+    result = await ow.get_air_pollution(lat=lat, lon=lon)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object dict can't be used in 'await' expression
+dispatcher.py:554 #INFO     [2025-10-02 12:17:27,519] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 12:17:27,776] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 12:17:27,780] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 12:17:31,575] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 12:17:32,620] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 12:17:32,769] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 12:17:33,903] - aiogram.event - Update id=497009571 is not handled. Duration 1 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 12:17:38,781] - aiogram.event - Update id=497009572 is handled. Duration 442 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 12:17:39,596] - aiogram.event - Update id=497009573 is handled. Duration 220 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 12:17:41,508] - aiogram.event - Update id=497009574 is handled. Duration 1400 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 12:25:41,021] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 12:25:41,282] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 12:25:41,285] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 12:25:45,124] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 12:25:48,411] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 12:25:51,230] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 12:25:51,663] - aiogram.event - Update id=497009576 is not handled. Duration 1 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 12:25:52,534] - aiogram.event - Update id=497009575 is handled. Duration 874 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 12:25:56,109] - aiogram.event - Update id=497009577 is handled. Duration 159 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 12:26:00,651] - aiogram.event - Update id=497009578 is handled. Duration 175 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 12:26:01,900] - aiogram.event - Update id=497009579 is handled. Duration 298 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 12:26:04,945] - aiogram.event - Update id=497009580 is handled. Duration 1422 ms by bot id=8314422399
+dispatcher.py:219 #ERROR    [2025-10-02 12:57:45,565] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+dispatcher.py:221 #WARNING  [2025-10-02 12:57:45,617] - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8314422399)
+dispatcher.py:233 #INFO     [2025-10-02 13:51:38,205] - aiogram.dispatcher - Connection established (tryings = 1, bot id = 8314422399)
+dispatcher.py:172 #INFO     [2025-10-02 13:51:38,568] - aiogram.event - Update id=497009583 is handled. Duration 360 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 13:51:38,925] - aiogram.event - Update id=497009582 is handled. Duration 718 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 13:51:39,301] - aiogram.event - Update id=497009581 is handled. Duration 1093 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 13:55:20,427] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 13:55:20,686] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 13:55:20,690] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 13:55:24,856] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 13:55:25,661] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 13:55:25,796] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 13:55:28,398] - aiogram.event - Update id=497009584 is handled. Duration 522 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 13:55:30,776] - aiogram.event - Update id=497009585 is handled. Duration 680 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 13:56:23,473] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 13:56:23,740] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 13:56:23,741] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 13:56:27,611] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 13:56:28,395] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 13:56:28,526] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 13:56:29,117] - aiogram.event - Update id=497009586 is handled. Duration 425 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 13:56:30,186] - aiogram.event - Update id=497009587 is handled. Duration 214 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 13:56:31,760] - aiogram.event - Update id=497009588 is handled. Duration 1064 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 13:56:41,179] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 13:56:41,445] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 13:56:41,447] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 13:56:45,356] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 13:56:47,430] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 13:56:47,758] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 13:56:48,526] - aiogram.event - Update id=497009589 is handled. Duration 542 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 13:56:50,074] - aiogram.event - Update id=497009590 is handled. Duration 159 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 13:56:52,804] - aiogram.event - Update id=497009591 is handled. Duration 1053 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 13:57:19,004] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 13:57:19,264] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 13:57:19,267] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 13:57:24,126] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 13:57:24,844] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 13:57:24,974] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 13:57:26,142] - aiogram.event - Update id=497009592 is handled. Duration 452 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 13:57:27,189] - aiogram.event - Update id=497009593 is handled. Duration 232 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 13:57:28,995] - aiogram.event - Update id=497009594 is handled. Duration 1165 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 13:59:01,077] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 13:59:01,329] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 13:59:01,331] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 13:59:05,043] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 13:59:05,979] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 13:59:06,158] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 13:59:07,886] - aiogram.event - Update id=497009595 is handled. Duration 524 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 13:59:09,023] - aiogram.event - Update id=497009596 is handled. Duration 294 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 13:59:11,370] - aiogram.event - Update id=497009597 is handled. Duration 1309 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:00:49,213] - aiogram.event - Update id=497009598 is handled. Duration 294 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:00:50,915] - aiogram.event - Update id=497009599 is handled. Duration 252 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:00:52,700] - aiogram.event - Update id=497009600 is handled. Duration 822 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:00:57,279] - aiogram.event - Update id=497009601 is handled. Duration 738 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:01:08,933] - aiogram.event - Update id=497009602 is handled. Duration 1121 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:01:13,245] - aiogram.event - Update id=497009603 is handled. Duration 947 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:01:29,950] - aiogram.event - Update id=497009604 is handled. Duration 2448 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:01:32,124] - aiogram.event - Update id=497009605 is handled. Duration 411 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:03:59,466] - aiogram.event - Update id=497009606 is handled. Duration 193 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:04:02,639] - aiogram.event - Update id=497009607 is handled. Duration 1590 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:04:17,892] - aiogram.event - Update id=497009608 is handled. Duration 140 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 14:04:42,288] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 14:04:42,543] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 14:04:42,545] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 14:04:47,075] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 14:04:49,205] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 14:04:49,532] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 14:04:50,836] - aiogram.event - Update id=497009609 is handled. Duration 980 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:04:51,420] - aiogram.event - Update id=497009610 is handled. Duration 891 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:04:52,431] - aiogram.event - Update id=497009611 is handled. Duration 141 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:04:55,031] - aiogram.event - Update id=497009612 is handled. Duration 1350 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 14:05:23,120] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 14:05:23,374] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 14:05:23,377] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 14:05:26,862] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 14:05:28,259] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 14:05:28,547] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 14:05:28,901] - aiogram.event - Update id=497009613 is not handled. Duration 1 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:05:31,887] - aiogram.event - Update id=497009614 is handled. Duration 605 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:05:33,344] - aiogram.event - Update id=497009615 is handled. Duration 401 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:05:42,757] - aiogram.event - Update id=497009616 is handled. Duration 7813 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 14:06:20,902] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 14:06:21,156] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 14:06:21,159] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 14:06:24,932] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 14:06:25,924] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 14:06:26,052] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 14:06:26,637] - aiogram.event - Update id=497009617 is handled. Duration 433 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:06:27,534] - aiogram.event - Update id=497009618 is handled. Duration 163 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:06:34,340] - aiogram.event - Update id=497009619 is handled. Duration 6096 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 14:07:14,887] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 14:07:15,139] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 14:07:15,142] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 14:07:22,600] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 14:07:23,459] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 14:07:23,597] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 14:07:26,558] - aiogram.event - Update id=497009620 is handled. Duration 647 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:07:27,456] - aiogram.event - Update id=497009621 is handled. Duration 212 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:07:29,788] - aiogram.event - Update id=497009622 is handled. Duration 1698 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 14:10:11,533] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 14:10:11,800] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 14:10:11,804] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 14:10:16,132] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 14:10:16,858] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 14:10:16,972] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 14:10:18,939] - aiogram.event - Update id=497009623 is handled. Duration 444 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:10:19,796] - aiogram.event - Update id=497009624 is handled. Duration 137 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:10:23,014] - aiogram.event - Update id=497009625 is handled. Duration 2594 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:10:29,971] - aiogram.event - Update id=497009626 is handled. Duration 2333 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:10:33,947] - aiogram.event - Update id=497009627 is handled. Duration 2283 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 14:11:05,501] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 14:11:05,759] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 14:11:05,763] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 14:11:10,089] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 14:11:10,823] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 14:11:10,954] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 14:11:11,575] - aiogram.event - Update id=497009628 is handled. Duration 395 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:11:12,712] - aiogram.event - Update id=497009629 is handled. Duration 153 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:11:15,460] - aiogram.event - Update id=497009630 is handled. Duration 2164 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 14:12:47,025] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 14:12:47,286] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 14:12:47,289] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 14:12:51,715] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 14:12:52,372] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 14:12:52,482] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 14:12:56,226] - aiogram.event - Update id=497009631 is handled. Duration 439 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:12:57,344] - aiogram.event - Update id=497009632 is handled. Duration 142 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:13:00,815] - aiogram.event - Update id=497009633 is handled. Duration 2707 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:13:06,409] - aiogram.event - Update id=497009634 is handled. Duration 1670 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 14:13:28,564] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 14:13:28,826] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 14:13:28,827] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 14:13:33,230] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 14:13:33,881] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 14:13:33,999] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 14:13:34,497] - aiogram.event - Update id=497009635 is handled. Duration 358 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:13:35,407] - aiogram.event - Update id=497009636 is handled. Duration 131 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:13:48,031] - aiogram.event - Update id=497009637 is handled. Duration 11807 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:14:44,179] - aiogram.event - Update id=497009638 is handled. Duration 2711 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:15:10,805] - aiogram.event - Update id=497009639 is handled. Duration 11443 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 14:15:27,365] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 14:15:27,628] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 14:15:27,630] - config.logger - Bot stopped
+main.py:10 #INFO     [2025-10-02 14:15:32,220] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 14:15:33,010] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 14:15:33,125] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 14:15:33,775] - aiogram.event - Update id=497009640 is handled. Duration 491 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:15:34,896] - aiogram.event - Update id=497009641 is handled. Duration 161 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:15:39,031] - aiogram.event - Update id=497009642 is handled. Duration 2362 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:15:50,074] - aiogram.event - Update id=497009643 is handled. Duration 2486 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:16:10,824] - aiogram.event - Update id=497009644 is handled. Duration 2086 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:16:25,057] - aiogram.event - Update id=497009645 is handled. Duration 2539 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:17:01,700] - aiogram.event - Update id=497009646 is handled. Duration 1971 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:17:07,248] - aiogram.event - Update id=497009647 is handled. Duration 2602 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 14:21:42,808] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 14:21:43,063] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:31 #INFO     [2025-10-02 14:21:43,068] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 14:26:07,710] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 14:26:09,456] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 14:26:09,571] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:554 #INFO     [2025-10-02 14:26:12,942] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 14:26:13,201] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 14:26:13,207] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 14:27:03,891] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 14:27:04,655] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 14:27:04,777] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:554 #INFO     [2025-10-02 14:27:05,251] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 14:27:05,511] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 14:27:05,515] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 14:31:00,780] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 14:31:01,500] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 14:31:01,615] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 14:31:02,139] - aiogram.event - Update id=497009648 is handled. Duration 391 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:31:03,212] - aiogram.event - Update id=497009649 is handled. Duration 156 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:31:09,809] - aiogram.event - Update id=497009650 is handled. Duration 1871 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:32:15,452] - aiogram.event - Update id=497009651 is handled. Duration 2136 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:33:04,054] - aiogram.event - Update id=497009652 is handled. Duration 225 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:34:42,840] - aiogram.event - Update id=497009653 is handled. Duration 171 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:34:58,130] - aiogram.event - Update id=497009654 is not handled. Duration 1 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:35:16,429] - aiogram.event - Update id=497009655 is not handled. Duration 1 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:35:19,071] - aiogram.event - Update id=497009656 is handled. Duration 286 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 14:50:04,871] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 14:50:05,125] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:32 #INFO     [2025-10-02 14:50:05,138] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 14:51:42,815] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 14:51:43,577] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 14:51:43,691] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 14:51:44,220] - aiogram.event - Update id=497009657 is handled. Duration 395 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:51:44,246] - aiogram.event - Update id=497009658 is handled. Duration 420 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:51:44,271] - aiogram.event - Update id=497009659 is handled. Duration 445 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:51:52,155] - aiogram.event - Update id=497009660 is handled. Duration 145 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:51:53,695] - aiogram.event - Update id=497009661 is handled. Duration 238 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:51:56,527] - aiogram.event - Update id=497009662 is not handled. Duration 2 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:52:37,217] - aiogram.event - Update id=497009663 is not handled. Duration 1 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 14:53:01,272] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 14:53:01,537] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:32 #INFO     [2025-10-02 14:53:01,541] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 14:53:05,552] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 14:53:06,279] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 14:53:06,406] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 14:53:18,103] - aiogram.event - Update id=497009664 is not handled. Duration 1 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:53:20,287] - aiogram.event - Update id=497009665 is handled. Duration 437 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:53:21,414] - aiogram.event - Update id=497009666 is handled. Duration 212 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:53:23,989] - aiogram.event - Update id=497009667 is handled. Duration 140 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 14:53:32,534] - aiogram.event - Update id=497009668 is handled. Duration 156 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 15:09:51,217] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 15:09:51,476] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:34 #INFO     [2025-10-02 15:09:51,479] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 15:13:10,681] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 15:13:11,542] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 15:13:11,665] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 15:13:16,185] - aiogram.event - Update id=497009669 is handled. Duration 380 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:13:28,664] - aiogram.event - Update id=497009670 is handled. Duration 6356 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 15:18:38,727] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 15:18:38,989] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 15:18:38,992] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 15:18:42,996] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 15:18:44,169] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 15:18:44,288] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 15:18:51,691] - aiogram.event - Update id=497009671 is handled. Duration 6371 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 15:20:07,700] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 15:20:07,955] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 15:20:07,958] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 15:20:11,813] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 15:20:12,567] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 15:20:12,711] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 15:20:13,563] - aiogram.event - Update id=497009672 is handled. Duration 447 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:20:21,473] - aiogram.event - Update id=497009673 is handled. Duration 6757 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 15:27:27,614] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 15:27:27,878] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 15:27:27,881] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 15:27:35,988] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 15:27:36,773] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 15:27:36,893] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 15:27:44,534] - aiogram.event - Update id=497009674 is handled. Duration 6253 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 15:28:52,758] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 15:28:53,014] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 15:28:53,016] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 15:28:57,096] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 15:28:57,724] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 15:28:57,839] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 15:29:12,172] - aiogram.event - Update id=497009675 is handled. Duration 12976 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 15:32:47,136] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 15:32:47,394] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 15:32:47,397] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 15:32:53,074] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 15:32:53,934] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 15:32:54,071] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 15:32:59,924] - aiogram.event - Update id=497009676 is handled. Duration 399 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:33:03,703] - aiogram.event - Update id=497009677 is handled. Duration 2682 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 15:33:52,631] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 15:33:52,885] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 15:33:52,889] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 15:33:56,548] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 15:33:57,271] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 15:33:57,405] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 15:34:10,132] - aiogram.event - Update id=497009678 is handled. Duration 10123 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:34:51,607] - aiogram.event - Update id=497009679 is handled. Duration 138 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:34:57,732] - aiogram.event - Update id=497009680 is handled. Duration 2455 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:35:37,453] - aiogram.event - Update id=497009681 is handled. Duration 3076 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:35:53,405] - aiogram.event - Update id=497009682 is handled. Duration 2386 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:37:01,701] - aiogram.event - Update id=497009683 is handled. Duration 143 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:37:06,606] - aiogram.event - Update id=497009684 is handled. Duration 2430 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 15:38:20,595] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 15:38:20,855] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 15:38:20,859] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 15:38:24,772] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 15:38:25,623] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 15:38:25,746] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 15:38:26,267] - aiogram.event - Update id=497009685 is handled. Duration 384 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:38:27,581] - aiogram.event - Update id=497009686 is handled. Duration 139 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:38:32,077] - aiogram.event - Update id=497009687 is handled. Duration 1997 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:38:59,620] - aiogram.event - Update id=497009688 is handled. Duration 2753 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:39:27,611] - aiogram.event - Update id=497009689 is handled. Duration 2539 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:40:13,956] - aiogram.event - Update id=497009690 is handled. Duration 161 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:40:29,396] - aiogram.event - Update id=497009691 is handled. Duration 421 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:40:36,039] - aiogram.event - Update id=497009692 is handled. Duration 2251 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:40:49,156] - aiogram.event - Update id=497009693 is handled. Duration 2429 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:42:03,218] - aiogram.event - Update id=497009694 is handled. Duration 2172 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 15:43:06,130] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 15:43:06,397] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 15:43:06,403] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 15:43:10,751] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 15:43:11,577] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 15:43:11,719] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 15:43:14,671] - aiogram.event - Update id=497009695 is handled. Duration 449 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:43:15,704] - aiogram.event - Update id=497009696 is handled. Duration 172 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:43:19,572] - aiogram.event - Update id=497009697 is handled. Duration 2575 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:43:45,521] - aiogram.event - Update id=497009698 is handled. Duration 2241 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 15:45:32,137] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 15:45:32,397] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 15:45:32,402] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 15:45:36,842] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 15:45:37,722] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 15:45:37,853] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 15:45:40,525] - aiogram.event - Update id=497009699 is handled. Duration 414 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:45:41,824] - aiogram.event - Update id=497009700 is handled. Duration 174 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:45:50,055] - aiogram.event - Update id=497009701 is handled. Duration 2259 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:48:13,627] - aiogram.event - Update id=497009702 is handled. Duration 2078 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:48:57,382] - aiogram.event - Update id=497009703 is handled. Duration 2037 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:50:20,539] - aiogram.event - Update id=497009704 is handled. Duration 2423 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:50:47,813] - aiogram.event - Update id=497009705 is handled. Duration 162 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 15:51:02,286] - aiogram.event - Update id=497009706 is handled. Duration 13336 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 15:53:29,725] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 15:53:29,990] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 15:53:29,993] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 15:53:33,984] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 15:53:35,039] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 15:53:35,181] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 15:53:52,028] - aiogram.event - Update id=497009707 is handled. Duration 16171 ms by bot id=8314422399
+dispatcher.py:219 #ERROR    [2025-10-02 16:16:28,980] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+dispatcher.py:221 #WARNING  [2025-10-02 16:16:28,988] - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8314422399)
+dispatcher.py:233 #INFO     [2025-10-02 16:16:40,395] - aiogram.dispatcher - Connection established (tryings = 1, bot id = 8314422399)
+dispatcher.py:172 #INFO     [2025-10-02 16:25:08,021] - aiogram.event - Update id=497009708 is handled. Duration 743 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:25:17,460] - aiogram.event - Update id=497009709 is handled. Duration 8091 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:25:18,763] - aiogram.event - Update id=497009710 is handled. Duration 212 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:25:24,688] - aiogram.event - Update id=497009711 is handled. Duration 3240 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:25:31,844] - aiogram.event - Update id=497009712 is handled. Duration 2992 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:26:36,331] - aiogram.event - Update id=497009713 is handled. Duration 256 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:26:38,673] - aiogram.event - Update id=497009714 is handled. Duration 157 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:26:40,503] - aiogram.event - Update id=497009715 is handled. Duration 190 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:26:42,716] - aiogram.event - Update id=497009716 is handled. Duration 160 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:26:44,168] - aiogram.event - Update id=497009717 is handled. Duration 214 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 16:26:49,623] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 16:26:49,881] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 16:26:49,884] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 16:26:54,915] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 16:26:55,911] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 16:26:56,081] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 16:27:02,662] - aiogram.event - Update id=497009718 is not handled. Duration 1 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:27:04,818] - aiogram.event - Update id=497009719 is handled. Duration 788 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:27:06,695] - aiogram.event - Update id=497009720 is handled. Duration 234 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:27:09,396] - aiogram.event - Update id=497009721 is handled. Duration 1913 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:27:12,877] - aiogram.event - Update id=497009722 is handled. Duration 1936 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:27:16,925] - aiogram.event - Update id=497009723 is handled. Duration 1894 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:28:36,199] - aiogram.event - Update id=497009724 is handled. Duration 2363 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:28:44,942] - aiogram.event - Update id=497009725 is handled. Duration 2066 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:29:01,501] - aiogram.event - Update id=497009726 is handled. Duration 228 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:29:12,665] - aiogram.event - Update id=497009727 is handled. Duration 9314 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 16:34:08,886] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 16:34:09,149] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 16:34:09,152] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 16:34:14,025] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 16:34:14,882] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 16:34:15,034] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 16:34:23,148] - aiogram.event - Update id=497009728 is handled. Duration 7008 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:35:04,842] - aiogram.event - Update id=497009729 is not handled. Duration 2 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:39:05,981] - aiogram.event - Update id=497009730 is handled. Duration 315 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:39:12,855] - aiogram.event - Update id=497009731 is handled. Duration 2165 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:39:25,530] - aiogram.event - Update id=497009732 is handled. Duration 1949 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:45:32,393] - aiogram.event - Update id=497009733 is handled. Duration 2335 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:50:53,942] - aiogram.event - Update id=497009734 is handled. Duration 328 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:50:57,785] - aiogram.event - Update id=497009735 is handled. Duration 394 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 16:55:42,503] - aiogram.event - Update id=497009736 is handled. Duration 2713 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:08:11,363] - aiogram.event - Update id=497009737 is handled. Duration 3110 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 17:10:06,658] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 17:10:06,925] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 17:10:06,930] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 17:10:12,003] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 17:10:13,622] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 17:10:13,752] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 17:10:14,843] - aiogram.event - Update id=497009738 is handled. Duration 639 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:10:15,966] - aiogram.event - Update id=497009739 is handled. Duration 213 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:10:19,353] - aiogram.event - Update id=497009740 is handled. Duration 2676 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 17:11:38,534] - aiogram.dispatcher - Polling stopped
+dispatcher.py:219 #ERROR    [2025-10-02 17:11:38,556] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 1] [SSL: APPLICATION_DATA_AFTER_CLOSE_NOTIFY] application data after close notify (_ssl.c:2775)
+dispatcher.py:221 #WARNING  [2025-10-02 17:11:38,557] - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8314422399)
+dispatcher.py:359 #INFO     [2025-10-02 17:11:38,798] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 17:11:38,802] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 17:11:43,176] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 17:11:44,070] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 17:11:44,230] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 17:11:45,324] - aiogram.event - Update id=497009741 is handled. Duration 483 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:11:46,352] - aiogram.event - Update id=497009742 is handled. Duration 295 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:11:50,242] - aiogram.event - Update id=497009743 is handled. Duration 2747 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 17:14:06,078] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 17:14:06,337] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 17:14:06,340] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 17:14:11,133] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 17:14:12,136] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 17:14:12,281] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 17:14:14,900] - aiogram.event - Update id=497009744 is handled. Duration 588 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:14:27,503] - aiogram.event - Update id=497009745 is handled. Duration 11441 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:14:31,191] - aiogram.event - Update id=497009746 is handled. Duration 308 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:14:34,358] - aiogram.event - Update id=497009747 is handled. Duration 2264 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 17:18:59,975] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 17:19:00,236] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 17:19:00,240] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 17:19:05,047] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 17:19:05,951] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 17:19:06,106] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 17:19:07,035] - aiogram.event - Update id=497009748 is handled. Duration 425 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:19:08,049] - aiogram.event - Update id=497009749 is handled. Duration 174 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:19:11,164] - aiogram.event - Update id=497009750 is handled. Duration 2393 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:19:18,635] - aiogram.event - Update id=497009751 is handled. Duration 2222 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:19:23,698] - aiogram.event - Update id=497009752 is handled. Duration 2370 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 17:21:37,200] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 17:21:37,461] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 17:21:37,465] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 17:21:50,179] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 17:21:51,921] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 17:21:52,275] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 17:21:53,394] - aiogram.event - Update id=497009753 is handled. Duration 883 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:21:54,941] - aiogram.event - Update id=497009754 is handled. Duration 326 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:21:59,766] - aiogram.event - Update id=497009755 is handled. Duration 3516 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:22:12,107] - aiogram.event - Update id=497009756 is handled. Duration 2963 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-02 17:23:03,173] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-02 17:23:03,428] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:33 #INFO     [2025-10-02 17:23:03,432] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-02 17:23:08,825] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-02 17:23:12,611] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-02 17:23:12,970] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-02 17:23:16,715] - aiogram.event - Update id=497009757 is handled. Duration 1369 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:23:18,785] - aiogram.event - Update id=497009758 is handled. Duration 873 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:23:25,270] - aiogram.event - Update id=497009759 is handled. Duration 4999 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:23:38,064] - aiogram.event - Update id=497009760 is handled. Duration 3693 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:23:43,919] - aiogram.event - Update id=497009761 is handled. Duration 3340 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:23:50,005] - aiogram.event - Update id=497009762 is handled. Duration 2811 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:23:55,225] - aiogram.event - Update id=497009763 is handled. Duration 3335 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:24:41,660] - aiogram.event - Update id=497009764 is handled. Duration 302 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:24:57,931] - aiogram.event - Update id=497009765 is handled. Duration 15257 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-02 17:29:39,151] - aiogram.event - Update id=497009766 is not handled. Duration 2 ms by bot id=8314422399
+main.py:11 #INFO     [2025-10-03 10:17:50,835] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-03 10:17:53,213] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-03 10:17:53,734] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-03 10:18:13,427] - aiogram.event - Update id=497009767 is handled. Duration 1038 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:18:28,349] - aiogram.event - Update id=497009768 is handled. Duration 202 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:18:36,727] - aiogram.event - Update id=497009769 is handled. Duration 156 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:18:43,295] - aiogram.event - Update id=497009770 is handled. Duration 5486 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:18:52,327] - aiogram.event - Update id=497009771 is handled. Duration 155 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:18:57,626] - aiogram.event - Update id=497009772 is handled. Duration 3661 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:19:10,354] - aiogram.event - Update id=497009773 is handled. Duration 2489 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:19:17,102] - aiogram.event - Update id=497009774 is handled. Duration 3670 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:19:20,610] - aiogram.event - Update id=497009775 is handled. Duration 1065 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:19:25,433] - aiogram.event - Update id=497009776 is handled. Duration 544 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:19:29,913] - aiogram.event - Update id=497009777 is handled. Duration 469 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:19:32,822] - aiogram.event - Update id=497009778 is handled. Duration 406 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:19:36,579] - aiogram.event - Update id=497009779 is not handled. Duration 1 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:20:16,305] - aiogram.event - Update id=497009780 is not handled. Duration 2 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:20:24,307] - aiogram.event - Update id=497009781 is not handled. Duration 2 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-03 10:21:00,195] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-03 10:21:00,463] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:34 #INFO     [2025-10-03 10:21:00,465] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-03 10:21:04,563] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-03 10:21:09,228] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-03 10:21:09,940] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-03 10:21:12,000] - aiogram.event - Update id=497009782 is handled. Duration 1312 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:21:12,582] - aiogram.event - Update id=497009783 is handled. Duration 277 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:21:13,748] - aiogram.event - Update id=497009784 is handled. Duration 226 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:21:15,141] - aiogram.event - Update id=497009785 is handled. Duration 299 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:21:16,542] - aiogram.event - Update id=497009786 is handled. Duration 193 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-03 10:21:32,014] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-03 10:21:32,271] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:34 #INFO     [2025-10-03 10:21:32,272] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-03 10:21:36,803] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-03 10:21:38,140] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-03 10:21:38,301] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-03 10:21:39,025] - aiogram.event - Update id=497009787 is handled. Duration 560 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:21:40,885] - aiogram.event - Update id=497009788 is handled. Duration 142 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:21:41,820] - aiogram.event - Update id=497009789 is handled. Duration 140 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:21:42,903] - aiogram.event - Update id=497009790 is handled. Duration 195 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-03 10:22:23,020] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-03 10:22:23,284] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:34 #INFO     [2025-10-03 10:22:23,286] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-03 10:22:28,244] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-03 10:22:28,887] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-03 10:22:29,008] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-03 10:22:31,704] - aiogram.event - Update id=497009791 is handled. Duration 553 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:22:32,609] - aiogram.event - Update id=497009792 is handled. Duration 349 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:22:34,808] - aiogram.event - Update id=497009793 is handled. Duration 262 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:22:35,707] - aiogram.event - Update id=497009794 is handled. Duration 126 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:23:36,169] - aiogram.event - Update id=497009795 is not handled. Duration 2 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:23:37,650] - aiogram.event - Update id=497009796 is handled. Duration 131 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:23:38,853] - aiogram.event - Update id=497009797 is handled. Duration 188 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:23:39,994] - aiogram.event - Update id=497009798 is handled. Duration 146 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:23:40,753] - aiogram.event - Update id=497009799 is handled. Duration 148 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:23:42,983] - aiogram.event - Update id=497009800 is handled. Duration 136 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:23:45,281] - aiogram.event - Update id=497009801 is handled. Duration 231 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-03 10:24:26,744] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-03 10:24:26,997] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:34 #INFO     [2025-10-03 10:24:27,001] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-03 10:24:32,065] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-03 10:24:35,085] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-03 10:24:35,707] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-03 10:24:41,285] - aiogram.event - Update id=497009802 is handled. Duration 4800 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:24:41,491] - aiogram.event - Update id=497009803 is handled. Duration 871 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:24:43,048] - aiogram.event - Update id=497009804 is handled. Duration 326 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:24:44,174] - aiogram.event - Update id=497009805 is handled. Duration 206 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:24:45,897] - aiogram.event - Update id=497009806 is handled. Duration 463 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-03 10:31:06,184] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-03 10:31:06,439] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:34 #INFO     [2025-10-03 10:31:06,443] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-03 10:31:13,615] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-03 10:31:17,534] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-03 10:31:17,834] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-03 10:31:20,064] - aiogram.event - Update id=497009807 is handled. Duration 1466 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:31:22,303] - aiogram.event - Update id=497009808 is handled. Duration 159 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:31:28,165] - aiogram.event - Update id=497009809 is handled. Duration 4496 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-03 10:32:02,161] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-03 10:32:02,425] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:34 #INFO     [2025-10-03 10:32:02,429] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-03 10:32:06,288] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-03 10:32:08,476] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-03 10:32:08,816] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-03 10:32:11,725] - aiogram.event - Update id=497009811 is handled. Duration 2090 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:32:11,726] - aiogram.event - Update id=497009810 is handled. Duration 2094 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:32:14,854] - aiogram.event - Update id=497009812 is handled. Duration 608 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:32:18,085] - aiogram.event - Update id=497009813 is handled. Duration 1426 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:32:20,263] - aiogram.event - Update id=497009814 is handled. Duration 912 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:35:23,326] - aiogram.event - Update id=497009815 is handled. Duration 287 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:35:58,673] - aiogram.event - Update id=497009816 is handled. Duration 172 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-03 10:42:02,603] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-03 10:42:02,867] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:34 #INFO     [2025-10-03 10:42:02,877] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-03 10:42:08,435] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-03 10:42:09,748] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-03 10:42:10,064] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-03 10:42:12,022] - aiogram.event - Update id=497009817 is handled. Duration 1070 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:42:13,747] - aiogram.event - Update id=497009818 is handled. Duration 473 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:42:15,449] - aiogram.event - Update id=497009819 is handled. Duration 182 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:42:17,794] - aiogram.event - Update id=497009820 is handled. Duration 1268 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-03 10:46:44,885] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-03 10:46:45,146] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:34 #INFO     [2025-10-03 10:46:45,180] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-03 10:46:49,191] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-03 10:46:50,413] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-03 10:46:50,547] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-03 10:46:51,946] - aiogram.event - Update id=497009821 is handled. Duration 839 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:46:53,633] - aiogram.event - Update id=497009822 is handled. Duration 447 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:46:54,930] - aiogram.event - Update id=497009823 is handled. Duration 373 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:46:58,260] - aiogram.event - Update id=497009824 is not handled. Duration 2270 ms by bot id=8314422399
+dispatcher.py:315 #ERROR    [2025-10-03 10:46:58,261] - aiogram.event - Cause exception while process update id=497009824 by bot id=8314422399
+TypeError: FSInputFile.__init__() missing 1 required positional argument: 'path'
+Traceback (most recent call last):
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\python\pollution-bot\src\handlers\get_historical_data.py", line 100, in period_selection_handler
+    file = types.FSInputFile(filename=file_name)
+TypeError: FSInputFile.__init__() missing 1 required positional argument: 'path'
+dispatcher.py:554 #INFO     [2025-10-03 10:47:19,053] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-03 10:47:19,306] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:34 #INFO     [2025-10-03 10:47:19,309] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-03 10:47:23,528] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-03 10:47:24,776] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-03 10:47:25,038] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-03 10:47:26,061] - aiogram.event - Update id=497009825 is handled. Duration 665 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:47:27,244] - aiogram.event - Update id=497009826 is handled. Duration 263 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:47:28,877] - aiogram.event - Update id=497009827 is handled. Duration 246 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:47:31,682] - aiogram.event - Update id=497009828 is not handled. Duration 1505 ms by bot id=8314422399
+dispatcher.py:315 #ERROR    [2025-10-03 10:47:31,682] - aiogram.event - Cause exception while process update id=497009828 by bot id=8314422399
+TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 13] Can not write request body for https://api.telegram.org/bot8314422399:AAGzwOXlGjV0mmP_qLHzInHkrgEH_thSknI/sendDocument
+Traceback (most recent call last):
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client_reqrep.py", line 658, in write_bytes
+    await self.body.write(writer)
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\multipart.py", line 1008, in write
+    await part.write(writer)
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\payload.py", line 494, in write
+    chunk = await self._iter.__anext__()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\types\input_file.py", line 103, in read
+    async with aiofiles.open(self.path, "rb") as f:
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiofiles\base.py", line 63, in __aenter__
+    return await self
+           ^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiofiles\base.py", line 59, in __await__
+    self._obj = yield from self._coro.__await__()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiofiles\threadpool\__init__.py", line 92, in _open
+    f = await loop.run_in_executor(executor, cb)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+PermissionError: [Errno 13] Permission denied: '.'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\aiohttp.py", line 177, in make_request
+    async with session.post(
+               ~~~~~~~~~~~~^
+        url, data=form, timeout=self.timeout if timeout is None else timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as resp:
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 730, in _request
+    await resp.start(conn)
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client_reqrep.py", line 1059, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\streams.py", line 672, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [Errno 13] Can not write request body for https://api.telegram.org/bot8314422399:AAGzwOXlGjV0mmP_qLHzInHkrgEH_thSknI/sendDocument
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\python\pollution-bot\src\handlers\get_historical_data.py", line 101, in period_selection_handler
+    await message.answer_document(file, caption=f"{selected_period[2:]} data")
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\bot.py", line 453, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\qodir\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\session\aiohttp.py", line 184, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 13] Can not write request body for https://api.telegram.org/bot8314422399:AAGzwOXlGjV0mmP_qLHzInHkrgEH_thSknI/sendDocument
+dispatcher.py:554 #INFO     [2025-10-03 10:52:10,112] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-03 10:52:10,372] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:34 #INFO     [2025-10-03 10:52:10,375] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-03 10:52:14,696] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-03 10:52:16,659] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-03 10:52:16,811] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-03 10:52:23,776] - aiogram.event - Update id=497009829 is handled. Duration 1310 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:52:23,980] - aiogram.event - Update id=497009830 is handled. Duration 204 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:52:25,934] - aiogram.event - Update id=497009831 is handled. Duration 451 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:52:28,691] - aiogram.event - Update id=497009832 is handled. Duration 1439 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:52:55,186] - aiogram.event - Update id=497009833 is handled. Duration 303 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:52:57,115] - aiogram.event - Update id=497009834 is handled. Duration 273 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:53:01,106] - aiogram.event - Update id=497009835 is handled. Duration 2441 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:53:49,470] - aiogram.event - Update id=497009836 is handled. Duration 494 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:53:50,969] - aiogram.event - Update id=497009837 is handled. Duration 163 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:53:52,780] - aiogram.event - Update id=497009838 is handled. Duration 786 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-03 10:54:29,187] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-03 10:54:29,442] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:34 #INFO     [2025-10-03 10:54:29,446] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-03 10:54:57,218] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-03 10:54:58,461] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-03 10:54:58,726] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-03 10:54:59,576] - aiogram.event - Update id=497009840 is handled. Duration 658 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:54:59,577] - aiogram.event - Update id=497009839 is handled. Duration 660 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:55:01,472] - aiogram.event - Update id=497009841 is handled. Duration 241 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:55:03,600] - aiogram.event - Update id=497009842 is handled. Duration 371 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:55:11,692] - aiogram.event - Update id=497009843 is handled. Duration 280 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 10:55:20,924] - aiogram.event - Update id=497009844 is handled. Duration 5928 ms by bot id=8314422399
+dispatcher.py:219 #ERROR    [2025-10-03 11:16:24,650] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+dispatcher.py:221 #WARNING  [2025-10-03 11:16:24,650] - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8314422399)
+dispatcher.py:233 #INFO     [2025-10-03 11:16:36,764] - aiogram.dispatcher - Connection established (tryings = 1, bot id = 8314422399)
+dispatcher.py:172 #INFO     [2025-10-03 11:19:18,731] - aiogram.event - Update id=497009845 is handled. Duration 471 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 11:19:23,702] - aiogram.event - Update id=497009846 is handled. Duration 2876 ms by bot id=8314422399
+main.py:11 #INFO     [2025-10-03 14:55:14,294] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-03 14:55:15,134] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-03 14:55:15,270] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-03 14:55:18,386] - aiogram.event - Update id=497009847 is handled. Duration 399 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 14:55:31,264] - aiogram.event - Update id=497009848 is handled. Duration 10554 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 14:57:38,994] - aiogram.event - Update id=497009849 is handled. Duration 404 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:02:51,043] - aiogram.event - Update id=497009850 is handled. Duration 171 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:02:57,084] - aiogram.event - Update id=497009851 is handled. Duration 146 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:03:10,262] - aiogram.event - Update id=497009852 is handled. Duration 2063 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:03:59,287] - aiogram.event - Update id=497009853 is handled. Duration 180 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:04:01,020] - aiogram.event - Update id=497009854 is handled. Duration 141 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:05:08,928] - aiogram.event - Update id=497009858 is handled. Duration 477 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:05:08,936] - aiogram.event - Update id=497009859 is handled. Duration 485 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:05:08,957] - aiogram.event - Update id=497009856 is handled. Duration 507 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:05:08,973] - aiogram.event - Update id=497009860 is handled. Duration 521 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:05:11,695] - aiogram.event - Update id=497009857 is handled. Duration 3244 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:05:11,722] - aiogram.event - Update id=497009855 is handled. Duration 3272 ms by bot id=8314422399
+dispatcher.py:554 #INFO     [2025-10-03 15:05:14,441] - aiogram.dispatcher - Polling stopped
+dispatcher.py:359 #INFO     [2025-10-03 15:05:14,697] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+main.py:34 #INFO     [2025-10-03 15:05:14,701] - config.logger - Bot stopped
+main.py:11 #INFO     [2025-10-03 15:05:20,030] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-03 15:05:20,831] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-03 15:05:21,017] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-03 15:05:21,647] - aiogram.event - Update id=497009861 is handled. Duration 473 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:05:45,949] - aiogram.event - Update id=497009862 is handled. Duration 164 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:05:52,255] - aiogram.event - Update id=497009863 is handled. Duration 3996 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:06:06,992] - aiogram.event - Update id=497009864 is handled. Duration 9883 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:06:23,048] - aiogram.event - Update id=497009865 is handled. Duration 193 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:06:29,887] - aiogram.event - Update id=497009866 is handled. Duration 180 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:06:36,469] - aiogram.event - Update id=497009867 is handled. Duration 1821 ms by bot id=8314422399
+main.py:11 #INFO     [2025-10-03 15:14:36,353] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-03 15:14:37,193] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-03 15:14:37,331] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-03 15:14:37,946] - aiogram.event - Update id=497009876 is handled. Duration 452 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:37,947] - aiogram.event - Update id=497009869 is handled. Duration 457 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:37,947] - aiogram.event - Update id=497009878 is handled. Duration 452 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:37,948] - aiogram.event - Update id=497009868 is handled. Duration 460 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:37,965] - aiogram.event - Update id=497009877 is handled. Duration 470 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:37,965] - aiogram.event - Update id=497009872 is handled. Duration 474 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:37,971] - aiogram.event - Update id=497009874 is handled. Duration 478 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:37,976] - aiogram.event - Update id=497009873 is handled. Duration 484 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:37,983] - aiogram.event - Update id=497009881 is handled. Duration 486 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:37,992] - aiogram.event - Update id=497009875 is handled. Duration 498 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:37,994] - aiogram.event - Update id=497009870 is handled. Duration 503 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:38,009] - aiogram.event - Update id=497009879 is handled. Duration 512 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:38,015] - aiogram.event - Update id=497009871 is handled. Duration 524 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:38,027] - aiogram.event - Update id=497009885 is handled. Duration 528 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:38,067] - aiogram.event - Update id=497009882 is handled. Duration 569 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:38,089] - aiogram.event - Update id=497009880 is handled. Duration 592 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:38,115] - aiogram.event - Update id=497009884 is handled. Duration 616 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:38,143] - aiogram.event - Update id=497009883 is handled. Duration 645 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:52,339] - aiogram.event - Update id=497009886 is handled. Duration 194 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:52,683] - aiogram.event - Update id=497009887 is handled. Duration 171 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:57,474] - aiogram.event - Update id=497009889 is handled. Duration 1737 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:14:57,489] - aiogram.event - Update id=497009888 is handled. Duration 2097 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:15:02,708] - aiogram.event - Update id=497009891 is handled. Duration 250 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:15:02,974] - aiogram.event - Update id=497009890 is handled. Duration 1932 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:15:03,015] - aiogram.event - Update id=497009892 is handled. Duration 266 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:15:06,475] - aiogram.event - Update id=497009893 is handled. Duration 1803 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:15:11,818] - aiogram.event - Update id=497009894 is handled. Duration 5168 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:15:16,012] - aiogram.event - Update id=497009895 is handled. Duration 162 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:15:23,509] - aiogram.event - Update id=497009896 is handled. Duration 179 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:15:28,189] - aiogram.event - Update id=497009897 is handled. Duration 1982 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:17:25,763] - aiogram.event - Update id=497009898 is handled. Duration 160 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:17:32,609] - aiogram.event - Update id=497009899 is handled. Duration 293 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:17:36,545] - aiogram.event - Update id=497009900 is handled. Duration 204 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:18:05,794] - aiogram.event - Update id=497009901 is handled. Duration 413 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:18:10,835] - aiogram.event - Update id=497009902 is handled. Duration 191 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:18:12,321] - aiogram.event - Update id=497009903 is handled. Duration 174 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:18:16,872] - aiogram.event - Update id=497009904 is handled. Duration 1916 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:18:19,242] - aiogram.event - Update id=497009906 is handled. Duration 244 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:18:19,938] - aiogram.event - Update id=497009905 is handled. Duration 2373 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:18:25,718] - aiogram.event - Update id=497009907 is handled. Duration 4773 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:18:29,560] - aiogram.event - Update id=497009908 is handled. Duration 161 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:18:32,264] - aiogram.event - Update id=497009909 is handled. Duration 145 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:18:35,748] - aiogram.event - Update id=497009910 is handled. Duration 1484 ms by bot id=8314422399
+dispatcher.py:219 #ERROR    [2025-10-03 15:20:49,078] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+dispatcher.py:221 #WARNING  [2025-10-03 15:20:49,078] - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8314422399)
+dispatcher.py:233 #INFO     [2025-10-03 15:21:00,482] - aiogram.dispatcher - Connection established (tryings = 1, bot id = 8314422399)
+dispatcher.py:172 #INFO     [2025-10-03 15:21:03,233] - aiogram.event - Update id=497009911 is handled. Duration 485 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:28:05,582] - aiogram.event - Update id=497009912 is handled. Duration 283 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:28:08,753] - aiogram.event - Update id=497009913 is handled. Duration 242 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:28:17,028] - aiogram.event - Update id=497009914 is handled. Duration 3130 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:28:25,237] - aiogram.event - Update id=497009915 is handled. Duration 322 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:28:26,340] - aiogram.event - Update id=497009916 is handled. Duration 277 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:28:30,941] - aiogram.event - Update id=497009917 is handled. Duration 2681 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:28:47,597] - aiogram.event - Update id=497009918 is handled. Duration 169 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:28:55,300] - aiogram.event - Update id=497009919 is handled. Duration 5403 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:29:12,178] - aiogram.event - Update id=497009920 is handled. Duration 203 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:29:24,207] - aiogram.event - Update id=497009921 is handled. Duration 149 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:29:28,460] - aiogram.event - Update id=497009922 is handled. Duration 1456 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:32:42,038] - aiogram.event - Update id=497009923 is handled. Duration 160 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:32:46,131] - aiogram.event - Update id=497009924 is handled. Duration 164 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:33:30,211] - aiogram.event - Update id=497009925 is handled. Duration 174 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:33:33,331] - aiogram.event - Update id=497009926 is handled. Duration 316 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:33:42,862] - aiogram.event - Update id=497009927 is handled. Duration 2370 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:33:54,412] - aiogram.event - Update id=497009928 is handled. Duration 181 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:34:06,195] - aiogram.event - Update id=497009929 is handled. Duration 10026 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:34:18,249] - aiogram.event - Update id=497009930 is handled. Duration 170 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:34:21,555] - aiogram.event - Update id=497009931 is handled. Duration 178 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:34:26,652] - aiogram.event - Update id=497009932 is handled. Duration 1215 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:35:13,718] - aiogram.event - Update id=497009933 is handled. Duration 154 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:35:26,178] - aiogram.event - Update id=497009934 is handled. Duration 154 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:36:29,159] - aiogram.event - Update id=497009935 is handled. Duration 160 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:36:29,876] - aiogram.event - Update id=497009936 is handled. Duration 151 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:36:30,737] - aiogram.event - Update id=497009937 is handled. Duration 161 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:36:32,498] - aiogram.event - Update id=497009938 is handled. Duration 164 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:36:44,650] - aiogram.event - Update id=497009939 is handled. Duration 2352 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:36:56,925] - aiogram.event - Update id=497009940 is handled. Duration 143 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:37:08,500] - aiogram.event - Update id=497009941 is handled. Duration 9676 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:37:20,111] - aiogram.event - Update id=497009942 is handled. Duration 145 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:37:24,490] - aiogram.event - Update id=497009943 is handled. Duration 410 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:37:28,521] - aiogram.event - Update id=497009944 is handled. Duration 2012 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:37:42,070] - aiogram.event - Update id=497009945 is handled. Duration 167 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:37:44,058] - aiogram.event - Update id=497009946 is handled. Duration 493 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:37:50,519] - aiogram.event - Update id=497009947 is handled. Duration 2121 ms by bot id=8314422399
+dispatcher.py:219 #ERROR    [2025-10-03 15:41:50,621] - aiogram.dispatcher - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+dispatcher.py:221 #WARNING  [2025-10-03 15:41:50,650] - aiogram.dispatcher - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8314422399)
+dispatcher.py:233 #INFO     [2025-10-03 15:41:52,042] - aiogram.dispatcher - Connection established (tryings = 1, bot id = 8314422399)
+dispatcher.py:172 #INFO     [2025-10-03 15:41:52,512] - aiogram.event - Update id=497009948 is handled. Duration 469 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:43:37,589] - aiogram.event - Update id=497009949 is handled. Duration 9129 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:43:48,391] - aiogram.event - Update id=497009950 is handled. Duration 260 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:43:53,092] - aiogram.event - Update id=497009951 is handled. Duration 2182 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:44:14,642] - aiogram.event - Update id=497009952 is handled. Duration 1989 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:45:59,154] - aiogram.event - Update id=497009953 is handled. Duration 243 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:46:01,855] - aiogram.event - Update id=497009954 is handled. Duration 145 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:46:11,449] - aiogram.event - Update id=497009955 is handled. Duration 2449 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:46:15,859] - aiogram.event - Update id=497009956 is handled. Duration 2056 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:46:20,634] - aiogram.event - Update id=497009957 is handled. Duration 152 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:46:31,405] - aiogram.event - Update id=497009958 is handled. Duration 8722 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:46:35,028] - aiogram.event - Update id=497009959 is handled. Duration 167 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:46:40,437] - aiogram.event - Update id=497009960 is handled. Duration 185 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 15:46:43,465] - aiogram.event - Update id=497009961 is handled. Duration 1268 ms by bot id=8314422399
+font_manager.py:1639 #INFO     [2025-10-03 13:11:11,776] - matplotlib.font_manager - generated new fontManager
+font_manager.py:1639 #INFO     [2025-10-03 13:13:20,021] - matplotlib.font_manager - generated new fontManager
+main.py:11 #INFO     [2025-10-03 13:13:20,531] - config.logger - Starting bot
+dispatcher.py:527 #INFO     [2025-10-03 13:13:21,316] - aiogram.dispatcher - Start polling
+dispatcher.py:341 #INFO     [2025-10-03 13:13:21,443] - aiogram.dispatcher - Run polling for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:172 #INFO     [2025-10-03 13:13:21,591] - aiogram.event - Update id=497009962 is not handled. Duration 3 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 13:13:21,997] - aiogram.event - Update id=497009963 is handled. Duration 408 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 13:13:22,018] - aiogram.event - Update id=497009964 is handled. Duration 428 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 13:15:23,348] - aiogram.event - Update id=497009965 is handled. Duration 151 ms by bot id=8314422399
+dispatcher.py:172 #INFO     [2025-10-03 13:15:25,590] - aiogram.event - Update id=497009966 is handled. Duration 251 ms by bot id=8314422399
+dispatcher.py:455 #WARNING  [2025-10-03 13:15:30,260] - aiogram.dispatcher - Received SIGTERM signal
+dispatcher.py:359 #INFO     [2025-10-03 13:15:30,262] - aiogram.dispatcher - Polling stopped for bot @TashkentAP_bot id=8314422399 - 'Tashkent Air Pollution check (beta)'
+dispatcher.py:554 #INFO     [2025-10-03 13:15:30,263] - aiogram.dispatcher - Polling stopped

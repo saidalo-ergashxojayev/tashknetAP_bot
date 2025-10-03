@@ -1,2 +1,2 @@
 run:
-	clear && python3 main.py
+	clear && python main.py
